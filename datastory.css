@@ -15,12 +15,21 @@ header{
 	color: white; 
 	background-color: lightskyblue;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	padding-right: 50px;
 	padding-left: 50px;
+	border-bottom-left-radius: 15pt;
+	border-bottom-right-radius: 15pt;
 }
 .MainTitle{
 	font-family: "Gill Sans", sans-serif;
+}
+.BottomHeader{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	height:45px;
 }
 .BottomLeftHeader{
 	float: left;
@@ -30,8 +39,20 @@ header{
 }
 .HeadText{
 	text-align: center ;
-	font-family: verdana;
-	font-size: 80%;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 100%;
+}
+.Date{
+	text-align: center ;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 100%;
+}
+.Names{
+	text-align: center ;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 #Core{
 	margin-right: 100px;
@@ -43,26 +64,43 @@ header{
 h1{
 	text-align: center;
 	font-family: verdana;
-	font-size: 200%;
+	font-size: 250%;
 }
 h2{
 	text-align: center;
-	font-family: verdana;
-	font-size: 100%;
+	font-family: Helvetica Neue;
+	font-size: 140%;
 }
 h3{
 	text-align: center;
-	font-family: verdana;
-	font-size: 100%;
+	font-family: Helvetica Neue;
+	font-size: 120%;
 }
 p{
 	text-align: justify;
-	font-family: verdana;
-	font-size: 80%;
+	font-family: Helvetica Neue;
+	font-size: 100%;
+}
+ol{
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-size: 100%;
+}
+a:link{
+	color:black;
+}
+a:visited{
+	color: black;
+}
+a:hover{
+	background-color: lightgray;
+}
+object{
+	max-width: auto;
 }
 .Title{
 	text-align: center;
-	font-family: verdana;
+	font-family: Helvetica Neue;
 }
 .Right{
 	color: tomato;
@@ -77,13 +115,15 @@ footer{
 	padding-bottom: 10px;
 	padding-right: 50px;
 	padding-left: 50px;
-	height: 60px;
+	height: 80px;
+	border-top-left-radius: 15pt;
+	border-top-right-radius: 15pt;
 }
 .BottomLeftFooter{
 	float: left;
 	text-align: left;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	padding-right: 0px;
 	padding-left: 0px;
 }
@@ -103,8 +143,8 @@ footer{
 	padding-left: 0px;
 }
 .MailText{
-	font-family: Helvetica Neue;
-	font-size: 9pt;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 11pt;
 	text-align: left;
 	margin-top: 0px;
 	margin-bottom: 0px
