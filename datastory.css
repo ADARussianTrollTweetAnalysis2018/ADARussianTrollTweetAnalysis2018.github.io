@@ -55,10 +55,13 @@ header{
 	margin-bottom: 0px;
 }
 #Core{
-	margin-right: 100px;
-    margin-left : 100px;
+	/*margin-right: 10%;
+    margin-left : 10%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;*/
+	margin: 0 auto;
+    width: 1000px;
+    max-width: 1000px;
     font-family: Helvetica Neue !important;
 }
 h1{
