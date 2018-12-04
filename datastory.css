@@ -1,0 +1,111 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+header{
+	color: white; 
+	background-color: lightskyblue;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.MainTitle{
+	font-family: "Gill Sans", sans-serif;
+}
+.BottomLeftHeader{
+	float: left;
+}
+.BottomRightHeader{
+	float: right;
+}
+.HeadText{
+	text-align: center ;
+	font-family: verdana;
+	font-size: 80%;
+}
+#Core{
+	margin-right: 100px;
+    margin-left : 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Helvetica Neue !important;
+}
+h1{
+	text-align: center;
+	font-family: verdana;
+	font-size: 200%;
+}
+h2{
+	text-align: center;
+	font-family: verdana;
+	font-size: 100%;
+}
+h3{
+	text-align: center;
+	font-family: verdana;
+	font-size: 100%;
+}
+p{
+	text-align: justify;
+	font-family: verdana;
+	font-size: 80%;
+}
+.Title{
+	text-align: center;
+	font-family: verdana;
+}
+.Right{
+	color: tomato;
+}
+.Left{
+	color: dodgerblue;
+}
+footer{
+	background-color: lightskyblue;
+	color: white; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+	padding-left: 50px;
+	height: 60px;
+}
+.BottomLeftFooter{
+	float: left;
+	text-align: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.BottomRightFooter{
+	float: right;
+	text-align: left;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.EPFLfooter{
+	max-width: 50px;
+}
+.MailSec{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.MailText{
+	font-family: Helvetica Neue;
+	font-size: 9pt;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px
+}
