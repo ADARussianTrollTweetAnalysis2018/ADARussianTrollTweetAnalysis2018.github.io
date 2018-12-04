@@ -13,7 +13,7 @@ html {
 }
 header{
 	color: white; 
-	background-color: lightskyblue;
+	background-color: firebrick;
 	padding-top: 50px;
 	padding-bottom: 20px;
 	padding-right: 50px;
@@ -112,7 +112,7 @@ object{
 	color: dodgerblue;
 }
 footer{
-	background-color: lightskyblue;
+	background-color: firebrick;
 	color: white; 
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -137,7 +137,7 @@ footer{
 	padding-bottom: 0px;
 }
 .EPFLfooter{
-	max-width: 50px;
+	max-width: 75px;
 }
 .MailSec{
 	padding-top: 0px;
