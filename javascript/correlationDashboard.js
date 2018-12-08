@@ -290,9 +290,9 @@ function dashboardCorr(id, topicData, corrData){
     }
 
     function scatter(scatterData){
-        var scat={},    scatDim = {t: 60, r: 60, b: 60, l: 60};
-        scatDim.w = 600 - scatDim.l - scatDim.r, 
-        scatDim.h = 600 - scatDim.t - scatDim.b;
+        var scat={},    scatDim = {t: 60, r: 0, b: 60, l: 60};
+        scatDim.w = 500 - scatDim.l - scatDim.r, 
+        scatDim.h = 500 - scatDim.t - scatDim.b;
 
         // initial values displayed in scatter plot
         var topicDisp = "hillari";
