@@ -1,13 +1,30 @@
 body {
-    width:1060px;
-    margin:50px auto;
+  width:1060px;
+  margin:50px auto;
 }
-path {  stroke: #fff; }
-path:hover {  opacity:0.9; }
-rect:hover {  fill:dimgray; }
-.axis {  font: 12px sans-serif; }
-.legend tr{    border-bottom:1px solid grey; }
-.legend tr:first-child{    border-top:1px solid grey; }
+path {  
+  stroke: #fff; 
+}
+path:hover {  
+  opacity:0.9; 
+}
+rect:hover {  
+  fill:dimgray; 
+}
+.axis {  
+  font: 12px sans-serif; 
+}
+.legend tr{    
+  border-bottom:1px solid grey; 
+}
+.legend tr:first-child{    
+  border-top:1px solid grey; 
+}
+
+.histLab{
+  font-family: sans-serif;
+  font-size: 8px;
+}
 
 .axis path,
 .axis line {
@@ -16,7 +33,9 @@ rect:hover {  fill:dimgray; }
   shape-rendering: crispEdges;
 }
 
-.x.axis path {  display: none; }
+.x.axis path {  
+  display: none; 
+}
 .legend{
     margin-bottom:76px;
     display:inline-block;

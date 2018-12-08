@@ -4,7 +4,8 @@ d3.csv("data/TopicTroll.csv", function(data){
             freq:{
                 Right: +data.Percent_Right,
                 Left: +data.Percent_Left
-            }
+            },
+            total: +data.Percent
         };
 }, function(d) {
     dashboard('#dashboard', d);
@@ -15,7 +16,7 @@ function dashboard(id, fData){
     function segColor(c){ return {Right:"#FF6347", Left:"#1E90FF"}[c]; }
     
     // compute total for each state.
-    fData.forEach(function(d){d.total=d.freq.Right+d.freq.Left;});
+    //fData.forEach(function(d){d.total=d.freq.Right+d.freq.Left;});
     
     // function to handle histogram.
     function histoGram(fD){
@@ -62,10 +63,11 @@ function dashboard(id, fData){
             .on("mouseout",mouseout);// mouseout is defined below.
             
         //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(".2f")(d[1]) + "%"})
+        bars.append("text").attr("class","histLab")
+            .text(function(d){ return d3.format(".2f")(d[1]) + "%"})
             .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
             .attr("y", function(d) { return y(d[1])-5; })
-            .attr("text-anchor", "middle");
+            .attr("text-anchor", "middle")
         
         function mouseover(d){  // utility function to be called on mouseover.
             // filter for selected state.
@@ -86,7 +88,7 @@ function dashboard(id, fData){
         // create function to update the bars. This will be used by pie-chart.
         hG.update = function(nD, color){
             // update the domain of the y-axis map to reflect change in frequencies.
-            y.domain([0, d3.max(nD, function(d) { return d[1]; })]);
+            //y.domain([0, d3.max(nD, function(d) { return d[1]; })]);
             
             // Attach the new data to the bars.
             var bars = hGsvg.selectAll(".bar").data(nD);
@@ -99,7 +101,7 @@ function dashboard(id, fData){
 
             // transition the frequency labels location and change value.
             bars.select("text").transition().duration(500)
-                .text(function(d){ return d3.format(".2f")(d[1])})
+                .text(function(d){ return d3.format(".2f")(d[1]) + "%"})
                 .attr("y", function(d) {return y(d[1])-5; });            
         }        
         return hG;
