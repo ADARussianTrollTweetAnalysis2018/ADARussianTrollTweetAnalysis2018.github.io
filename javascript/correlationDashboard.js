@@ -353,6 +353,7 @@ function dashboardCorr(id, topicData, corrData){
 
 
         scat.updateScatter = function(topic, troll, poll){
+            var trans_time = 1000;
             // update scale
             xScale.domain([d3.min(scatterData, function(d) {return +d["adjpoll_"+poll]; }), d3.max(scatterData, function(d) { return +d["adjpoll_"+poll]; })]);
             yScale.domain([d3.min(scatterData, function(d) {return +d[topic+"_"+troll+"Troll"]; }), d3.max(scatterData, function(d) { return +d[topic+"_"+troll+"Troll"]; })]);
@@ -365,8 +366,16 @@ function dashboardCorr(id, topicData, corrData){
 
             xlabel.text("Polls " + poll + "[%]");
             ylabel.text("Number of " + troll + " Tweet about " + topic);
+            
             scatXAxis.scale(xScale);
+            scatSVG.select(".x")
+                   .transition().duration(trans_time)
+                   .call(scatXAxis);
+
             scatYAxis.scale(yScale);
+            scatSVG.select(".y")
+                   .transition().duration(trans_time)
+                   .call(scatYAxis);
         }
         return scat;
     }
