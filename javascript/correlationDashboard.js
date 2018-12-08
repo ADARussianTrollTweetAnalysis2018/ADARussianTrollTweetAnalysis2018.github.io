@@ -1,7 +1,7 @@
 //load data
 d3.queue()
-  .defer(d3.csv, "Correlation_topic.csv")
-  .defer(d3.csv, "Scatter_Polls_Topics.csv")
+  .defer(d3.csv, "data/Correlation_topic.csv")
+  .defer(d3.csv, "data/Scatter_Polls_Topics.csv")
   .await(function(error, file1, file2) {
             if (error) {
                 console.error('Oh dear, something went wrong: ' + error);
