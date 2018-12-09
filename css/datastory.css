@@ -31,6 +31,7 @@ header{
 	padding-right: 10px;
 	padding-left: 10px;
 	height:45px;
+	width:1000px;
 	display: inline-block;
 }
 .BottomLeftHeader{
@@ -101,7 +102,7 @@ a:hover{
 	background-color: lightgray;
 }
 object{
-	max-width: auto;
+
 }
 .Title{
 	text-align: center;
@@ -114,7 +115,7 @@ object{
 	color: dodgerblue;
 }
 .bokeh_plot{
-	margin:0 auto;
+	width:1000px;
 }
 footer{
 	background-color: firebrick;
