@@ -145,7 +145,7 @@ function dashboardCorr(id, topicData, corrData){
                                 .attr("text-anchor", "middle")
                                 .attr("x", TopHgDim.l+TopHgDim.w/2)
                                 .attr("y", -20)
-                                .text("Spearman Coefficent of Trump Polls vs Tweet Number per Topic");
+                                .text("Spearman Coefficent of Trump Approval Rate vs Tweet Number per Topic");
 
 
         function mouseover_R(d){  // utility function to be called on mouseover of right column
@@ -267,7 +267,7 @@ function dashboardCorr(id, topicData, corrData){
                                 .attr("text-anchor", "middle")
                                 .attr("x", BotHgDim.l+BotHgDim.w/2)
                                 .attr("y", -20)
-                                .text("Spearman Coefficent of Clinton Polls vs Tweet Number per Topic");
+                                .text("Spearman Coefficent of Trump Disapproval Rate vs Tweet Number per Topic");
 
         function mouseover_R(d){  // utility function to be called on mouseover of right column
             scat.updateScatter(d[0], "Right", "clinton")

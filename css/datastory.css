@@ -20,6 +20,7 @@ header{
 	padding-left: 50px;
 	border-bottom-left-radius: 15pt;
 	border-bottom-right-radius: 15pt;
+	text-align: center;
 }
 .MainTitle{
 	font-family: "Gill Sans", sans-serif;
@@ -30,6 +31,7 @@ header{
 	padding-right: 10px;
 	padding-left: 10px;
 	height:45px;
+	display: inline-block;
 }
 .BottomLeftHeader{
 	float: left;
@@ -110,6 +112,9 @@ object{
 }
 .Left{
 	color: dodgerblue;
+}
+.bokeh_plot{
+	margin:0 auto;
 }
 footer{
 	background-color: firebrick;
