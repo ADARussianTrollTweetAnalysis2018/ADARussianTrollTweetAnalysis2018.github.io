@@ -1,0 +1,66 @@
+#dashboardCorrelationPresid{
+    position: relative;
+    height: 600px; /* bigger than your svg */
+    width: 1100px;
+}
+.topHistP{
+    position:absolute;
+    top:0px;
+    left:0px;
+
+}
+.botHistP{
+    position:absolute;
+    top:300px;
+    left:0px;
+}
+.scatPlotP{
+    position:absolute;
+    top:0px;
+    left:500px;
+}
+
+.barP rect:hover {  
+    fill:gray; 
+}
+.axisP {  
+    font: 12px sans-serif; 
+}
+
+.axisP path,
+.axisP line {
+  fill: none;
+  stroke: #000;
+  /*stroke-width:1px;*/
+  shape-rendering: crispEdges;
+}
+.THxP.axisP path {
+    display: none;
+}
+.pointP {
+    fill:dimgray;
+    opacity: 0.5;
+}
+
+.scatAxisP path,
+.scatAxisP line{
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.scatAxisP text{
+    font-family: sans-serif;
+    font-size: 11px;
+}
+.labelP{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.HlegP{
+    font-family: sans-serif;
+    font-size: 11px;
+}
+.plotTitleP{
+    font-family: sans-serif;
+    font-size: 14px;
+}
