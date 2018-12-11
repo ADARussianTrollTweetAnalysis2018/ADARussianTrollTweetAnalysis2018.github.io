@@ -17,16 +17,6 @@
 		<header>
 			<div class="HeadContent"> 
 				<h1 class="MainTitle">Russian Troll Tweets and Their Influence on Public Opinion</h1>
-				<p class="HeadText"><b>ADA Project</b></p>
-				
-			</div>
-			<div class="BottomHeader">
-				<div class="BottomLeftHeader">
-					<p class="Date">December 2018</p>
-				</div>
-				<div class="BottomRightHeader">
-					<p class="Names">Jean-Baptiste Prost <br> Nicolas Gandar <br> Antoine Spahr</p>
-				</div>
 			</div>
 		</header>
 		
@@ -34,70 +24,94 @@
 		<div id="Core">
 			<!-- INTRODUCTION OF THE DATASTORY -->
 			<div class="Intro">
-				<h2 class="Title">#Abstract</h2>
+				<h2 class="Title">#Intro & Data</h2>
 
-				<p>The outcome of the 2016 US election were a surprise, only few experts predicted a Trump win. Since then, it has been revealed that the Russian might have had an influence on the election through their action on social media, especially Twitter. It has been revealed that many Twitter acounts were actually troll accounts trying to play with the public opinion. Is it true? Did it work? Can we found any correlation between those tweets and the public opinion during the elections? <br>
-				Moreover, the troll accounts were active in a larger span than just the Presidential elections. They might have tried to play the public opinion into the approval of Trump as president as well.</p>
-			</div>
-			
-			<!-- DATA OF THE DATASTORY -->
-			<div class="Data">
-				<h2 class="Title">#Datasets</h2>
+				<p>The outcome of the 2016 US election were a surprise, only few experts predicted a Trump win.</p>
 
-				<p> For the purpose of answering those questions, the <a href="https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/" target="_blank">dataset</a> released by FiveThirtyEight is used. It contains 2'973'371 troll tweets from the Internet Research Agency, collected by Darren Linvill and Patrick Warren of Clemson University. They have registered 5 different kind of trolls:</p>
-					<ol>
-						<li><b>Right Trolls</b> Mimic Trump supporters</li>
-						<li><b>Left Trolls</b> Mimic Black Lives Matter activist, and try to divide the Democratic Party</li>
-						<li><b>News Feed</b> Aggregates local Amercian news</li>
-						<li><b>Hashtag</b> Gamer Participant in Hashtag games</li>
-						<li><b>Fear Monger</b> Spread news about fake crisis</li>
-					</ol>
-				<p>The focus is given to <span class="Right">Right</span> and <span class="Left">Left</span> Trolls as they are more pollitically engaged. <br>
-				To explore a potential correlation with the election polls, the 2016 election polls <a href="https://www.kaggle.com/fivethirtyeight/2016-election-polls" target="_blank">data</a> is obatined on Kaggle. It contains the adjusted approval polls rates for Clinton and Trump given by different pollsters at different dates. To explore a potential link with the public opinion about the Trump presidency, another <a href="https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo" target="_blank">dataset</a> is used: the Trump approvals polls rate. It has been taken from FiveThirtyEight. It contains the adjusted approval and disapproval rates of Trump from different pollsters at different dates.</p>
+				<p>Since top intelligence officials of the Obama administration announced in October 7 2016 their belief that the Russian government was behind the hacking of the Democratic National Committee earlier in the year, the possibility of Russian interference in the election has been a recurrent subject. It is believed that their means of action included not only hacking but also transfer of information as well as public opinion manipulation. To sway the public opinion, the Kremlin used an army of online trolls through its Internet Research Agency (IRA) based in St. Petersburg, one of the trolls’ media was Trump’s favorite: Twitter. </p>
+
+				<p>The main dataset we are using was released by FiveThirtyEight and contains close to 3 million tweets posted by the IRA . Although the majority were in English, the tweets were posted in 55 different languages and 5 categories.</p>
+
+				<p>The trolls work did not stop at the US election and continued well into 2018.
+					The analysis focuses on english-speaking Right and Left Troll, and their relation with events and the US political landscape from 2014 to 2018. 
+					The political situation in the US was interpreted by analyzing 2016 Presidential polls before the elections, and Trump’s approval rate afterwards. All <a href="https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/" target="_blank">datasets</a> were given by FiveThirtyEight.
+				</p>
 			</div>
 
 			<!-- TROLL CHARACTERIZATION -->
 			<div class="TrollChar">
 				<h2 class="Title">#What are the Trolls</h2>
 
-				<p>What are the trolls? How much do they tweet? How many followers do they have? This is a high level characterization of trolls, but it helps to understand how they work. 
-				<br>The plot below present the tweet activity of Right and Left trolls along time.</p>
+				<p>What is their plan of action ? How much do they tweet? How many followers do they have ? The answers might help characterization their aim and how they operate. </p>
+
+				<p>The filter data set is composed of 1 131 960 tweets: 713 177  are labeled as Right-trolls and 418 783 as Left-trolls. The right trolling strategy is prefered suggesting that this strategy could be simpler to operate or more efficient.</p>
+
+				<p>The plot below presents the number of Right and Left trolls tweets with the top hashtag per day. The distribution is not smooth but rather follows an interesting spiking behavior. A larger activity is observable during the autumn 2016 corresponding to the election period and the summer 2017. A maximum peak reaches about 14’000 tweets in a single day !  While the Right trolling starts in the early 2015 and decreases at the end of 2017, the Left trolls concentrate their activity in 2016 until it suddenly stops in mid-2017 when less than fifty messages are posted per day.</p>
 
 				<!-- TWEET ACTIVITY PLOT -->
 				<!--<object width="1000" height="1000" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>-->
 
-                <object width="1100" height="500" align="middle" data="plots/TopHashtag_perday.html" class="bokeh_plot"> 
+                <object width="1000" height="500" align="middle" data="plots/top_daily_tweets.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
-                <p>The spikeness of the troll tweet activity shows that they usually don't tweet too much, but there are some date/periode in which the number of tweet explodes! Right Trolls seems to tweet more than the Left as more spikes are present.</p>
+                <p>The top hashtag per day exhibit a large variety of terms. A clear tendency is not observable highlighting the dynamism of Twitter topics. Nonetheless, #youtube is consistently the most popular hashtag for the Left trolls in the early 2017.</p>
+	
+				<p>The most popular expression in the tweet content is analysed for each category. The color code represents the trolls orientation of an expression:
+				</p>
 
-                <img src="images/RdPd.png" alt="Colormap" class="colormapImg">
+                <img src="images/RdPb.png" alt="Colormap" class="colormapImg">
+
+                <h3>Top Words</h3>
+                <p>The Right Trolls seems to be more involved in politics as Trump, Hillary and Obama are the most popular words. The word ‘trump’ is used about 120’000 times that is about 13% of the total tweets. On the other hand, the Left trolls often used words related to music (music, live, play, video) and social movement related to black people (black and matter). Surprisingly, the word Hillary is more used by the right trolls than the left trolls</p>
 
                 <object width="1000" height="400" align="middle" data="plots/Top_words.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
+
+                <h3> Top #</h3>
+                <p>The hashtags can better characterize a tweet as it usually represents its key words. The expressions are clear oriented and specific to the category. The Left troll tweet are confirmed to be related to BlackLivesMatter movement and music whereas the Right trolls use mostly the Donald Trump’s slogan Make America Great Again and conservative and islamophobic topics (#2A, #IslamKills…).</p>
+
                  <object width="1000" height="400" align="middle" data="plots/Top_hash.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
+
+                <h3>Top @</h3>
+                <p>The user-tagging indicates to whom or what organization the trolls react and addresses their tweet. The Right Trolls mainly comment about news-papers either relay the information or to criticize it. On the other hand, the LeftTrolls mention activists related to the Black Lives Matter movement.</p>
+
                  <object width="1000" height="400" align="middle" data="plots/Top_at.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
+                <p>A first conclusion of the right and left trolling strategies can be assumed from these informations:</p>
+                	<ul>
+                		<li>Left trolls are involved in the black discrimination cause and share often about music content.</li>
+                		<li>Right trolls are more involved politically supporting Donald Trump’s conservative idea.</li>
+                	</ul>
+
+                <p>The most popular expressions and the top hashtags per day enable to highlight some recurrent themes. It might be more interesting to directly investigate and the topics rather than the type of trolling. To understand what aspect of society was targeted and dig deeper into the tweets content, tweets were labelled with selected topics.</p>
 			</div>
 			
 			<!-- TOPIC -->
 			<div class="Topic">
 				<h2 class="Title">#What do Trolls Tweet About</h2>
 
+				<p>What is the more popular troll topic ? What social debate is targeted by the trolls ? Are tweet activity spikes correlated to events ? </p>
+
+				<p>A set of 21 topics is created matching the hashtags and the spontaneous tweets spikes over time. A list of key words for each topic is created and enriched thanks to a Word2vec machine learning model. It enables to analyse the tweets words and reconstruct their linguistic context. Hence, similar words share the same representation and can be gathered as topics. Starting for few words, the lists are extended ten times. </p>
+				
+				<div id='dashboard'></div>
+				<script src="javascript/dashboard.js" type="text/javascript"></script>
+				
+				<p>How these topics are represent over time ? Are they a reaction to a specific event ?</p>
+
 				<object width="1000" height="650" align="middle" data="plots/Topic_Events.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
-				<div id='dashboard'></div>
-				<script src="javascript/dashboard.js" type="text/javascript"></script>
+				
 			</div>
 
 			<!-- LINK WITH THE 2016 ELECTIONS -->
@@ -133,15 +147,25 @@
 		</div>
 		<!-- FOOTER OF THE DATASTORY -->
 		<footer>
-			<div class='BottomLeftFooter'>
-				<img src="images/EPFL_logo.png" alt="EPFL Logo" class="EPFLfooter">
-			</div>
-			<div class='BottomRightFooter'>
-				<div class='MailSec'>
-					<p class="MailText"> <b>Contact Mail</b> <br>
-						nicolas.gandar@epfl.ch <br>
-						jean-baptiste.prost@epfl.ch <br>
-						antoine.spahr@epfl.ch</p>
+			<div class="BottomFooterContent">
+				<div class='BottomLeftFooter'>
+					<div class="EPFLfooter">
+						<img src="images/EPFL_logo.png" alt="EPFL Logo" class="EPFLlogo">
+					</div>
+					<div class="DLABfooter">
+						<img src="images/dlab.svg" alt="DLAB Logo" class="DLABlogo">
+					</div>
+				</div>
+				<div class="BottomCenterFooter">
+						<p class="Date">December 2018</p>
+				</div>
+				<div class='BottomRightFooter'>
+					<div class='MailSec'>
+						<p class="Names">
+							Nicolas Gandar      <span class="MailText">nicolas.gandar@epfl.ch</span> <br>
+							Jean-Baptise Prost  <span class="MailText">jean-baptiste.prost@epfl.ch</span> <br>
+							Antoine Spahr       <span class="MailText">antoine.spahr@epfl.ch</span></p>
+					</div>
 				</div>
 			</div>
 		</footer>

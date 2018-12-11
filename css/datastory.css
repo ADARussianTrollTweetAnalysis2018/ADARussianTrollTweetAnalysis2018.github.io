@@ -13,17 +13,19 @@ html {
 }
 header{
 	color: white; 
-	background-color: firebrick;
+	background-color: cornflowerblue;
 	padding-top: 50px;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 	padding-right: 50px;
 	padding-left: 50px;
-	border-bottom-left-radius: 15pt;
-	border-bottom-right-radius: 15pt;
+	border-bottom-left-radius: 10pt;
+	border-bottom-right-radius: 10pt;
 	text-align: center;
+	box-shadow: 0px 0px 80px 10px lightsteelblue;
+
 }
 .MainTitle{
-	font-family: "Gill Sans", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 }
 .BottomHeader{
 	padding-top: 10px;
@@ -45,23 +47,12 @@ header{
 	font-family: "Gill Sans", sans-serif;
 	font-size: 100%;
 }
-.Date{
-	text-align: center ;
-	font-family: "Gill Sans", sans-serif;
-	font-size: 100%;
-}
-.Names{
-	text-align: center ;
-	font-family: "Gill Sans", sans-serif;
-	font-size: 100%;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
 #Core{
 	/*margin-right: 10%;
     margin-left : 10%;
     margin-top: 50px;
     margin-bottom: 50px;*/
+    padding-top: 50px;
 	margin: 0 auto;
     width: 1000px;
     max-width: 1000px;
@@ -70,7 +61,7 @@ header{
 h1{
 	text-align: center;
 	font-family: verdana;
-	font-size: 250%;
+	font-size: 350%;
 }
 h2{
 	text-align: center;
@@ -116,18 +107,21 @@ object{
 }
 .bokeh_plot{
 	width:1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 img.colormapImg{
 	display: block;
     margin-left: auto;
-    margin-right: auto
-    max-width:800px;
+    margin-right: auto;
+    max-width:400px;
 }
 footer{
-	background-color: firebrick;
+	background-color: cornflowerblue;
+	box-shadow: 0px 0px 80px 10px lightsteelblue;
 	color: white; 
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	padding-right: 50px;
 	padding-left: 50px;
 	height: 80px;
@@ -142,6 +136,13 @@ footer{
 	padding-right: 0px;
 	padding-left: 0px;
 }
+.BottomCenterFooter{
+	float:left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
 .BottomRightFooter{
 	float: right;
 	text-align: left;
@@ -149,7 +150,17 @@ footer{
 	padding-bottom: 0px;
 }
 .EPFLfooter{
-	max-width: 75px;
+	float: left;
+}
+.DLABfooter{
+	float: right;
+	margin-left: 50px;
+}
+.EPFLlogo{
+	max-height: 60px;
+}
+.DLABlogo{
+	max-height: 60px;
 }
 .MailSec{
 	padding-top: 0px;
@@ -157,10 +168,22 @@ footer{
 	padding-right: 0px;
 	padding-left: 0px;
 }
+.Date{
+	text-align: center ;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 100%;
+}
+.Names{
+	text-align: left ;
+	font-family: "Gill Sans", sans-serif;
+	font-style: bold;
+	font-size: 14pt;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 .MailText{
 	font-family: "Gill Sans", sans-serif;
-	font-size: 11pt;
-	text-align: left;
-	margin-top: 0px;
-	margin-bottom: 0px
+	font-size: 12pt;
+	text-align: right;
+	margin-left:50px;
 }
