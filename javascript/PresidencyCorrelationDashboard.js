@@ -354,7 +354,6 @@ function dashboardCorrPresidency(id, topicData, corrData){
 
         scat.updateScatter = function(topic, troll, poll){
             var trans_time = 1000;
-            console.log("adjusted_"+poll+"/"+topic+"_"+troll+"Troll");
             //topic[0].toUpperCase()
             // update scale
             xScale.domain([d3.min(scatterData, function(d) {return +d["adjusted_"+poll]; }), d3.max(scatterData, function(d) { return +d["adjusted_"+poll]; })]);
