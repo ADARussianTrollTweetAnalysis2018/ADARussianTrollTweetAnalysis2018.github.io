@@ -1,7 +1,7 @@
 //load data
 d3.queue()
   .defer(d3.csv, "data/Correlation_topic.csv")
-  .defer(d3.csv, "data/Scatter_Polls_Topics.csv")
+  .defer(d3.csv, "data/Scatter_Polls_Topics_Elections.csv")
   .await(function(error, file1, file2) {
             if (error) {
                 console.error('Oh dear, something went wrong: ' + error);
@@ -295,7 +295,7 @@ function dashboardCorr(id, topicData, corrData){
         scatDim.h = 500 - scatDim.t - scatDim.b;
 
         // initial values displayed in scatter plot
-        var topicDisp = "hillari";
+        var topicDisp = "Hillary";
         var trollDisp = "Right";
         var pollDisp = "trump";
 
@@ -381,8 +381,8 @@ function dashboardCorr(id, topicData, corrData){
     }
 
     /* DEFINE DATA TO CREATE HIST AND SCATTER*/
-    var tHData = topicData.map(function(d){return [d.topics,+d.Tl, +d.Tr];});
-    var bHData = topicData.map(function(d){return [d.topics,+d.Cl, +d.Cr];});
+    var tHData = topicData.map(function(d){return [d.topic,+d.Tl, +d.Tr];});
+    var bHData = topicData.map(function(d){return [d.topic,+d.Cl, +d.Cr];});
     //var sData = corrData.map(function(d){return [d.date,+d[]]})
 
     var tHG = topHist(tHData); // create the Top Histogram.

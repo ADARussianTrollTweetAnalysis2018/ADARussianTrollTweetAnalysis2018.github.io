@@ -114,21 +114,21 @@ function dashboardCorrPresidency(id, topicData, corrData){
         var pad = 120;
         var space = 3;
         var legTHR = TopHgSVG.append("rect")
-                            .attr("x",TopHgDim.l+TopHgDim.w-pad)
-                            .attr("y",0)
+                            .attr("x",TopHgDim.l+TopHgDim.w-2*pad)
+                            .attr("y",-50)
                             .attr("width",legDim)
                             .attr("height",legDim)
                             .attr("fill",barColorRight)
         var legRtext = TopHgSVG.append("text")
                                 .attr("class", "LeftP HlegP")
                                 .attr("text-anchor", "left")
-                                .attr("x", TopHgDim.l+TopHgDim.w-pad+legDim+space)
-                                .attr("y", legDim)
+                                .attr("x", TopHgDim.l+TopHgDim.w-2*pad+legDim+space)
+                                .attr("y", -50 + legDim)
                                 .text("Right Troll Spearman"); 
 
         var legTHL = TopHgSVG.append("rect")
                             .attr("x",TopHgDim.l+TopHgDim.w-pad)
-                            .attr("y",legDim+space)
+                            .attr("y", -50)
                             .attr("width",legDim)
                             .attr("height",legDim)
                             .attr("fill",barColorLeft)
@@ -136,7 +136,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
                                 .attr("class", "LeftP HlegP")
                                 .attr("text-anchor", "left")
                                 .attr("x", TopHgDim.l+TopHgDim.w-pad+legDim+space)
-                                .attr("y", 2*legDim+space)
+                                .attr("y", -50 + legDim)
                                 .text("Left Troll Spearman");
 
         //add plot title

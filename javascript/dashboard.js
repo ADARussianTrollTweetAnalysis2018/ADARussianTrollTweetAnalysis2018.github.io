@@ -1,6 +1,6 @@
 d3.csv("data/TopicTroll.csv", function(data){
         return{
-            topic: data.Topic,
+            topic: data.topic,
             freq:{
                 Right: +data.Percent_Right,
                 Left: +data.Percent_Left
@@ -20,7 +20,7 @@ function dashboard(id, fData){
     
     // function to handle histogram.
     function histoGram(fD){
-        var hG={},    hGDim = {t: 60, r: 0, b: 70, l: 10};
+        var hG={},    hGDim = {t: 60, r: 0, b: 80, l: 10};
         hGDim.w = 550 - hGDim.l - hGDim.r, 
         hGDim.h = 300 - hGDim.t - hGDim.b;
             
