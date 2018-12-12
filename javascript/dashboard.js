@@ -13,10 +13,7 @@ d3.csv("data/TopicTroll.csv", function(data){
 
 function dashboard(id, fData){
     var barColor = 'darkgray';
-    function segColor(c){ return {Right:"#FF6347", Left:"#1E90FF"}[c]; }
-    
-    // compute total for each state.
-    //fData.forEach(function(d){d.total=d.freq.Right+d.freq.Left;});
+    function segColor(c){ return {Right:"tomato", Left:"dodgerblue", Total:'darkgray'}[c]; }
     
     // function to handle histogram.
     function histoGram(fD){
@@ -109,7 +106,7 @@ function dashboard(id, fData){
     
     // function to handle pieChart.
     function pieChart(pD){
-        var pC ={},    pieDim ={w:250, h: 250};
+        var pC ={},    pieDim ={w:200, h: 200};
         pieDim.r = Math.min(pieDim.w, pieDim.h) / 2;
                 
         // create svg for pie chart.
@@ -175,8 +172,8 @@ function dashboard(id, fData){
         tr.append("td").text(function(d){ return d.type;});
 
         // create the third column for each segment.
-        tr.append("td").attr("class",'legendFreq')
-            .text(function(d){ return d3.format(".2f")(d.freq);});
+        //tr.append("td").attr("class",'legendFreq')
+        //    .text(function(d){ return d3.format(".2f")(d.freq);});
 
         // create the fourth column for each segment.
         tr.append("td").attr("class",'legendPerc')
@@ -188,14 +185,18 @@ function dashboard(id, fData){
             var l = legend.select("tbody").selectAll("tr").data(nD);
 
             // update the frequencies.
-            l.select(".legendFreq").text(function(d){ return d3.format(".2f")(d.freq);});
+            //l.select(".legendFreq").text(function(d){ return d3.format(".2f")(d.freq);});
 
             // update the percentage column.
             l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
         }
         
         function getLegend(d,aD){ // Utility function to compute percentage.
-            return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
+            if(d.type == "Total"){
+                return d3.format("%")(1);   
+            } else {
+                return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
+            }
         }
 
         return leg;
