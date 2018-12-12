@@ -203,7 +203,7 @@ function dashboard(id, fData){
     }
     
     // calculate total frequency by segment for all topic.
-    var tF = ['Right','Left'].map(function(d){ 
+    var tF = ['Right','Left', 'Total'].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
     
