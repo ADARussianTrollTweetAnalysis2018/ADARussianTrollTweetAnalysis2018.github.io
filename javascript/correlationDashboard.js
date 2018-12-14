@@ -116,7 +116,7 @@ function dashboardCorr(id, topicData, corrData){
         var pad = 120;
         var space = 3;
         var legTHR = TopHgSVG.append("rect")
-                            .attr("x",TopHgDim.l+TopHgDim.w-pad)
+                            .attr("x",TopHgDim.l+TopHgDim.w-2*pad)
                             .attr("y",0)
                             .attr("width",legDim)
                             .attr("height",legDim)
@@ -124,13 +124,13 @@ function dashboardCorr(id, topicData, corrData){
         var legRtext = TopHgSVG.append("text")
                                 .attr("class", "Left Hleg")
                                 .attr("text-anchor", "left")
-                                .attr("x", TopHgDim.l+TopHgDim.w-pad+legDim+space)
+                                .attr("x", TopHgDim.l+TopHgDim.w-2*pad+legDim+space)
                                 .attr("y", legDim)
                                 .text("Right Troll Spearman"); 
 
         var legTHL = TopHgSVG.append("rect")
                             .attr("x",TopHgDim.l+TopHgDim.w-pad)
-                            .attr("y",legDim+space)
+                            .attr("y",0)
                             .attr("width",legDim)
                             .attr("height",legDim)
                             .attr("fill",barColorLeft)
@@ -138,7 +138,7 @@ function dashboardCorr(id, topicData, corrData){
                                 .attr("class", "Left Hleg")
                                 .attr("text-anchor", "left")
                                 .attr("x", TopHgDim.l+TopHgDim.w-pad+legDim+space)
-                                .attr("y", 2*legDim+space)
+                                .attr("y", legDim)
                                 .text("Left Troll Spearman");
 
         //add plot title

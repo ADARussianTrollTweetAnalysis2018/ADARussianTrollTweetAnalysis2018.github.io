@@ -52,7 +52,7 @@
                     Your browser doesn’t support the object tag. 
                 </object>-->
 
-                <object width="1000" height="900" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
+                <object width="1000" height="1000" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
@@ -105,7 +105,7 @@
 
 				<p>What is the more popular troll topic ? What social debate is targeted by the trolls ? Are tweet activity spikes correlated to events ? </p>
 
-				<p>A set of 25  topics is created inspired by the popular hashtags and the events that affected the american politic. The lists of keywords are enriched thanks to a Word2vec machine learning model for each topic. Word2Vec enables to learn the linguistic context of each word over all tweets and represent them as “concepts”. Hence, similar words share the same representation and can thus be gathered in topics. Starting from few words, the lists are extended ten times using our model trained on the tweets content. <br> The proportions of tweets in each topic provides an overview of the debates that were particularly targeted by the trolls and enables to characterize more precisely the Left and Right trolls.</p>
+				<p>A set of 25  topics is created inspired by the popular hashtags and the events that affected the american politic. The lists of keywords are enriched thanks to a Word2vec machine learning model for each topic. Word2Vec enables to learn the linguistic context of each word over all tweets and represent them as “concepts”. Hence, similar words share the same representation and can thus be gathered in topics. Starting from few words, the lists are extended ten times using our model trained on the tweets content.</p>
 
 				<div class="tabTopic">
 				  <button class="tablinks" onclick="openTopic(event, 'Music')">Music</button>
@@ -250,6 +250,8 @@
 					  evt.currentTarget.className += " active";
 					}
 				</script>
+
+				<p>The proportions of tweets in each topic provides an overview of the debates that were particularly targeted by the trolls and enables to characterize more precisely the Left and Right trolls.</p>
 				
 				<div id='dashboard'></div>
 				<script src="javascript/dashboard.js" type="text/javascript"></script>
@@ -332,7 +334,7 @@
                 <div id="dashboardCorrelationPresid"></div>
                 <script src="javascript/PresidencyCorrelationDashboard.js" type="text/javascript"></script>
 
-                <p>The spearman coefficient distribution over topics looks different than for the elections. The correlation between the Left trolls tweets and the Trump approval rates are around 0.4 for all categories. In a similar fashion, the disapproval rate correlation with  is around -0.4. But take a closer look at the number of tweet on the y-axis of the scatter plot. There are not much, around 20 daily-tweets only. Even though the spearman correlation coefficients seem bigger, it is intuitively unlikely that 20 tweets can modulate the public opinion on a national scale. <br> On the other hand, the right trolls are more active and around 10 times more daily-tweets are observed, but it appears that no dependency exist between the right tweeting activity and the (dis)approval rate Trump as president.</p>
+                <p>The spearman coefficient distribution over topics looks different than for the elections. The correlation between the Left trolls tweets and the Trump approval rates are around 0.4 for all categories. In a similar fashion, the disapproval rate correlation with  is around -0.4. But take a closer look at the number of tweet on the y-axis of the scatter plot. There are not much, around 20 daily-tweets only. Even though the spearman correlation coefficients seem bigger, it is intuitively unlikely that 20 tweets can modulate the public opinion on a national scale. <br> On the other hand, the right trolls are more active and around 10 times more daily-tweets are observed, but it appears that no dependency exist between the right tweeting activity and the (dis)approval rate of Trump as president.</p>
 			</div>
 			
 			<!-- CONCLUSION OF THE DATASTORY -->
