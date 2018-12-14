@@ -81,6 +81,12 @@ h3{
 	font-family: "Avenir Next Ultra Light";
 	font-size: 120%;
 }
+h5{
+	text-align: left;
+	font-family: "Avenir Next Ultra Light";
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 p{
 	text-align: justify;
 	font-family: "Avenir Next Ultra Light";
@@ -123,6 +129,42 @@ img.colormapImg{
     margin-left: auto;
     margin-right: auto;
     max-width:400px;
+}
+/* Style the tab */
+.tabTopic {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tabTopic button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 13px;
+	transition: 0.3s;
+	font-size: 12px;
+}
+
+/* Change background color of buttons on hover */
+.tabTopic button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabTopic button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 2px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 footer{
 	background-color: cornflowerblue;

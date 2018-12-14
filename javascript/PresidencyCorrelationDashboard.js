@@ -14,8 +14,8 @@ d3.queue()
 function dashboardCorrPresidency(id, topicData, corrData){
     var barColorRight = "tomato";
     var barColorLeft = "dodgerblue";
-    var ymin = -0.6;
-    var ymax = 0.6;
+    var ymin = -0.55;
+    var ymax = 0.55;
 
     function topHist(histData){
         // hist dimensions
@@ -144,7 +144,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
         //add plot title
         var titleTH = TopHgSVG.append("text")
                                 .attr("class", "plotTitleP")
-                                .attr("text-anchor", "middle")
+                                .attr("text-anchor", "left")
                                 .attr("x", TopHgDim.l+TopHgDim.w/2)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Approval Rate vs Tweet Number per Topic");
@@ -266,7 +266,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
         //add plot title
         var titleTH = BotHgSVG.append("text")
                                 .attr("class", "plotTitleP")
-                                .attr("text-anchor", "middle")
+                                .attr("text-anchor", "left")
                                 .attr("x", BotHgDim.l+BotHgDim.w/2)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Disapproval Rate vs Tweet Number per Topic");

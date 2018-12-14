@@ -14,12 +14,12 @@ d3.queue()
 function dashboardCorr(id, topicData, corrData){
     var barColorRight = "tomato";
     var barColorLeft = "dodgerblue";
-    var ymin = -0.6;
-    var ymax = 0.6;
+    var ymin = -0.55;
+    var ymax = 0.55;
 
     function topHist(histData){
         // hist dimensions
-        var TopHg={},    TopHgDim = {t: 50, r: 10, b: 80, l: 10};
+        var TopHg={},    TopHgDim = {t: 50, r: 10, b: 90, l: 10};
         TopHgDim.w = 500 - TopHgDim.l - TopHgDim.r, 
         TopHgDim.h = 300 - TopHgDim.t - TopHgDim.b;
 
