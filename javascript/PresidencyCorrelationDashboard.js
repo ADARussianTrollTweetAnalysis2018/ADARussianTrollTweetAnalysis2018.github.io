@@ -14,6 +14,8 @@ d3.queue()
 function dashboardCorrPresidency(id, topicData, corrData){
     var barColorRight = "tomato";
     var barColorLeft = "dodgerblue";
+    var ymin = -0.6;
+    var ymax = 0.6;
 
     function topHist(histData){
         // hist dimensions
@@ -44,8 +46,8 @@ function dashboardCorrPresidency(id, topicData, corrData){
                 .attr("transform", "rotate(-45)");
 
         // Create function for y-axis map.
-        var ymax = d3.max(histData, function(d) { return Math.max(d[1],d[2]); });
-        var ymin = d3.min(histData, function(d) { return Math.min(d[1],d[2]); });
+        //var ymax = d3.max(histData, function(d) { return Math.max(d[1],d[2]); });
+        //var ymin = d3.min(histData, function(d) { return Math.min(d[1],d[2]); });
         var y = d3.scale.linear()
         				.range([TopHgDim.h, 0])
                 		.domain([ymin, ymax]);
@@ -195,8 +197,8 @@ function dashboardCorrPresidency(id, topicData, corrData){
                 .attr("transform", "rotate(-45)");
 
         // Create function for y-axis map.
-        var ymax = d3.max(histData, function(d) { return Math.max(d[1],d[2]); });
-        var ymin = d3.min(histData, function(d) { return Math.min(d[1],d[2]); });
+        //var ymax = d3.max(histData, function(d) { return Math.max(d[1],d[2]); });
+        //var ymin = d3.min(histData, function(d) { return Math.min(d[1],d[2]); });
         var y = d3.scale.linear()
         				.range([BotHgDim.h, 0])
                 		.domain([ymin, ymax]);
