@@ -26,60 +26,65 @@
 			<div class="Intro">
 				<!--<h2 class="Title">Intro & Data</h2>-->
 
-				<p>The outcome of the 2016 US election were a surprise, only few experts predicted a Trump win.</p>
+				<p>The outcome of the 2016 US election were a surprise, very few experts predicted a Trump win. How come so few people previewed its rise? One argument regularly proposed is a possible outside influence...</p>
 
-				<p>Since top intelligence officials of the Obama administration announced in October 7 2016 their belief that the Russian government was behind the hacking of the Democratic National Committee earlier in the year, the possibility of Russian interference in the election has been a recurrent subject. It is believed that their means of action included not only hacking but also transfer of information as well as public opinion manipulation. To sway the public opinion, the Kremlin used an army of online trolls through its Internet Research Agency (IRA) based in St. Petersburg, one of the trolls’ media was Trump’s favorite: Twitter. </p>
+				<p>Since top intelligence officials of the Obama administration announced on October 7 2016 their belief that the Russian government was behind the hacking of the Democratic National Committee earlier in the year, Russia has been accused of meddling with the 2016 US elections. It is believed that their means of action included not only hacking but also transfer of information as well as public opinion manipulation. For example, to sway the public opinion, the Kremlin used an army of online trolls through its Internet Research Agency (IRA) based in St. Petersburg, one of the trolls’ media was Trump’s favorite: Twitter. </p>
 
-				<p>The main dataset we are using was released by FiveThirtyEight and contains close to 3 million tweets posted by the IRA . Although the majority were in English, the tweets were posted in 55 different languages and 5 categories.</p>
+				<p>The main dataset we are using was released by FiveThirtyEight and contains close to 3 million tweets posted by the IRA . Although 72% of tweets were in English, they were posted in 55 different languages and categorized by Darren Linvill and Patrick Warren of Clemson University into 8 categories.</p>
 
-				<p>The trolls work did not stop at the US election and continued well into 2018.
-					The analysis focuses on english-speaking Right and Left Troll, and their relation with events and the US political landscape from 2014 to 2018. 
-					The political situation in the US was interpreted by analyzing 2016 Presidential polls before the elections, and Trump’s approval rate afterwards. All <a href="https://fivethirtyeight.com/features/why-were-sharing-3-million-russian-troll-tweets/" target="_blank">datasets</a> were given by FiveThirtyEight.
-				</p>
+				<p>Since we are looking into the effect of the tweet on the US politics, we focus on politically labeled english tweets: The ‘Left Troll’ and ‘Right Troll’ categories. These category are the result of Darren Linvill and Patrick Warren and were reviewed by external experts, hence we take these category as “true”. In the end, we have approximately 1M tweets, 63% of which are right-leaning.<br>The work of these trolls did not start at the election. Indeed, they started as soon as 2014 and continued well into 2018. Hence, the political situation in the US was interpreted by analyzing 2016 Presidential polls from November 2015 to the election a year later, and by analyzing Trump’s approval rate after the elections. All datasets were obtained from FiveThirtyEight.</p>
+
+				<p>To understand how the trolling could have had any effect, we need to first understand who are troll and how do they work. Then, we need dive into the tweets’ content to finally analyse the existence of a link with the 2016 elections or Trump’s approval rates.</p>
 			</div>
 
 			<!-- TROLL CHARACTERIZATION -->
 			<div class="TrollChar">
 				<h2 class="Title">What are the Trolls</h2>
 
-				<p>What is their plan of action ? How much do they tweet? How many followers do they have ? The answers might help characterization their aim and how they operate. </p>
+				<p>How can we gain a clearer image of who are trolls? We want to know how do they tweet, how many followers they have and how the subjects differ from right-trolls to left-trolls.</p>
 
-				<p>The filter data set is composed of 1 131 960 tweets: 713 177  are labeled as Right-trolls and 418 783 as Left-trolls. The right trolling strategy is prefered suggesting that this strategy could be simpler to operate or more efficient.</p>
+				<p>The filter data set is composed of 1 131 960 tweets from 850 trolls. 713 177  are labeled as Right-trolls and 418 783 as Left-trolls. 620 right and 230 left. The right trolling strategy is prefered suggesting that this strategy could be simpler to operate or more efficient.</p>
 
-				<p>The plot below presents the number of Right and Left trolls tweets with the top hashtag per day. The distribution is not smooth but rather follows an interesting spiking behavior. A larger activity is observable during the autumn 2016 corresponding to the election period and the summer 2017. A maximum peak reaches about 14’000 tweets in a single day !  While the Right trolling starts in the early 2015 and decreases at the end of 2017, the Left trolls concentrate their activity in 2016 until it suddenly stops in mid-2017 when less than fifty messages are posted per day.</p>
+				<p>The plot below presents the number of Right and Left trolls tweets with the top hashtag per day. The distribution is not smooth but rather follows an interesting spiking behavior. A larger activity is observable during the autumn 2016 corresponding to the election period and the summer 2017, which was a very eventful period, even by Trump’s standard.</p>
 
 				<!-- TWEET ACTIVITY PLOT -->
 				<!--<object width="1000" height="1000" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>-->
 
-                <object width="1000" height="500" align="middle" data="plots/top_daily_tweets.html" class="bokeh_plot"> 
+                <object width="1000" height="500" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
-                <p>The top hashtag per day exhibit a large variety of terms. A clear tendency is not observable highlighting the dynamism of Twitter topics. Nonetheless, #youtube is consistently the most popular hashtag for the Left trolls in the early 2017.</p>
+                <p>Internationally, Russia and the US were expelling their respectives government officials, clashing over the Syrian and Donbass conflicts and imposing new sanctions on each other. In Asia, a bellicose build-up between Trump and Kim Jung-Un lead to rockets flying over Japan in direction of Guam while tensions grew due to territorial dispute in the South China Sea. New sanctions were announced against Iran and diplomatic relations were degrading with old allies (Mexico, Australia) and Cuba. Finally, the US withdrew from the Paris climate agreement.</p>
 	
-				<p>The most popular expression in the tweet content is analysed for each category. The color code represents the trolls orientation of an expression:
-				</p>
+				<p>Nationally, Trump was under pressure from multiple side. The choc of the violent alt-right rally in Charlottesville and Trump’s poor management of the situation further divided the country and led to multiple officials resignation which was quickly followed by another one following the Paris Agreement withdrawal. Meanwhile the former FBI director James Comey was accusing Trump and his staff of lying to the FBI and lawsuits were brought against him following accusations of receiving emoluments from his business dealings in foreign countries, leading to impeachment efforts. However, this pressure did not refrain him from presenting a new immigration law, pardon a controversial and racist sheriff and following the Paris withdrawal by announcing a decrease in climate actions.</p>
+
+				<p>All these events help explain the dramatic increase in tweet activity, reaching 14’000 posts in a single day! While the Right trolling starts in the early 2015 and decreases at the end of 2017, the Left trolls concentrate their activity in 2016 until it suddenly stops in mid-2017 when less than fifty messages are posted per day and do not react to the aforementioned events. Unfortunately, we could not provide any explanations about the dramatic drop in both right and left troll activity in the beginning of May 2017. While the right troll activity picks up again during the aforementioned 2017 summer, the left trolls barely react to the craze.</p>
+
+				<p>The top hashtag per day exhibit a large variety of terms, no clear tendency is observable, thus highlighting the dynamism and temporarity of Twitter topics. Nonetheless, #youtube is consistently the most popular hashtag for the Left trolls in the early 2017.</p>
+
+				<p>The most popular expression in the tweet content is analysed for each category. It should be noted that the words are stemmed to count root words, focusing on subject more than on the form. The color code represents the trolls orientation of an expression:</p>
 
                 <img src="images/RdPb.png" alt="Colormap" class="colormapImg">
 
                 <h3>Top Words</h3>
-                <p>The Right Trolls seems to be more involved in politics as Trump, Hillary and Obama are the most popular words. The word ‘trump’ is used about 120’000 times that is about 13% of the total tweets. On the other hand, the Left trolls often used words related to music (music, live, play, video) and social movement related to black people (black and matter). Surprisingly, the word Hillary is more used by the right trolls than the left trolls</p>
+                <p>There is a flagrant differences of focus between the right and left trolls.
+                The Right Trolls are more involved in politics and news. First, ‘Trump’, ‘Hillary’ and ‘Obama’ are the most popular words, with ‘Clinton’ and ‘President’ also appearing. Overall, the word ‘Trump’ is used about 145’000 times or about 13% of the total tweets! Second, there is a visible focus on news as well, both the words ‘news’ and ‘break’ crack the top ten. Most of the ‘break’ appearance are stemmed from ‘breaking news’.<br>On the other hand, the Left trolls often used words related to music (‘music’, ‘live’, ‘play’, ‘video’) and social movement related to black people (‘black’, ‘live’ and ‘matter’ etc) as well as discrimination against black people (‘white’, ‘police’). Surprisingly, the words ‘Hillary’, ‘Clinton’ and ‘Obama’ are used more by the right trolls than the left trolls. This highlights a disinterest in politics from these trolls.</p>
 
                 <object width="1000" height="400" align="middle" data="plots/Top_words.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
                 <h3> Top #</h3>
-                <p>The hashtags can better characterize a tweet as it usually represents its key words. The expressions are clear oriented and specific to the category. The Left troll tweet are confirmed to be related to BlackLivesMatter movement and music whereas the Right trolls use mostly the Donald Trump’s slogan Make America Great Again and conservative and islamophobic topics (#2A, #IslamKills…).</p>
+                <p>The hashtags can better characterize a tweet as it usually represents its key words. The expressions are clearly oriented and specific to the category. The Left troll tweet are confirmed to be related to the Black Lives Matter movement and music whereas the Right trolls use mostly Trump’s related hashtag (#MAGA and #mar) and conservative (#2A, #tcot…) and islamophobic topics (#IslamKills…) and news (#news, #PJNET).</p>
 
                  <object width="1000" height="400" align="middle" data="plots/Top_hashtags.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
                 <h3>Top @</h3>
-                <p>The user-tagging indicates to whom or what organization the trolls react and addresses their tweet. The Right Trolls mainly comment about news-papers either relay the information or to criticize it. On the other hand, the LeftTrolls mention activists related to the Black Lives Matter movement.</p>
+                <p>The user-tagging indicates to whom or what organization the trolls react and addresses their tweet. The Right Trolls mainly react to newspapers either relay the information (in the case of FoxNews, Breitbart and Sean Hannity) or criticize it (CNN). On the other hand, the LeftTrolls mainly mention activists related to the Black Lives Matter movement.</p>
 
                  <object width="1000" height="400" align="middle" data="plots/Top_at.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
@@ -88,10 +93,10 @@
                 <p>A first conclusion of the right and left trolling strategies can be assumed from these informations:</p>
                 	<ul>
                 		<li>Left trolls are involved in the black discrimination cause and share often about music content.</li>
-                		<li>Right trolls are more involved politically supporting Donald Trump’s conservative idea.</li>
+                		<li>Right trolls are more involved politically supporting Donald Trump’s conservative idea and discussing news.</li>
                 	</ul>
 
-                <p>The most popular expressions and the top hashtags per day enable to highlight some recurrent themes. It might be more interesting to directly investigate and the topics rather than the type of trolling. To understand what aspect of society was targeted and dig deeper into the tweets content, tweets were labelled with selected topics.</p>
+                <p>The most popular expressions and the top hashtags per day enable to highlight some recurrent themes. It might be more interesting to directly investigate the topics rather than the type of trolling. To understand what aspect of society was targeted and dig deeper into the tweets content, tweets were labelled with selected topics.</p>
 			</div>
 			
 			<!-- TOPIC -->
@@ -100,7 +105,7 @@
 
 				<p>What is the more popular troll topic ? What social debate is targeted by the trolls ? Are tweet activity spikes correlated to events ? </p>
 
-				<p>A set of 21 topics is created matching the hashtags and the spontaneous tweets spikes over time. A list of key words for each topic is created and enriched thanks to a Word2vec machine learning model. It enables to analyse the tweets words and reconstruct their linguistic context. Hence, similar words share the same representation and can be gathered as topics. Starting for few words, the lists are extended ten times. </p>
+				<p>A set of 25  topics is created inspired by the popular hashtags and the events that affected the american politic. The lists of keywords are enriched thanks to a Word2vec machine learning model for each topic. Word2Vec enables to learn the linguistic context of each word over all tweets and represent them as “concepts”. Hence, similar words share the same representation and can thus be gathered in topics. Starting from few words, the lists are extended ten times using our model trained on the tweets content. <br> The proportions of tweets in each topic provides an overview of the debates that were particularly targeted by the trolls and enables to characterize more precisely the Left and Right trolls.</p>
 
 				<div class="tabTopic">
 				  <button class="tablinks" onclick="openTopic(event, 'Music')">Music</button>
@@ -203,7 +208,7 @@
 				</div>
 
 				<div id="BlackLivesMatter" class="tabcontent">
-				  <p><span class="tabContentTopic">Topic related to</span> the BlackLivesMatter protest movement fighting against discrimination toward black persons (Mainly because of police brutalities).</p>
+				  <p><span class="tabContentTopic">Topic related to</span> the BlackLivesMatter protest movement fighting against black persons discrimination (Mainly because of police brutalities).</p>
 				</div>
 
 				<div id="MeToo" class="tabcontent">
@@ -249,37 +254,85 @@
 				<div id='dashboard'></div>
 				<script src="javascript/dashboard.js" type="text/javascript"></script>
 				
-				<p>How these topics are represent over time ? Are they a reaction to a specific event ?</p>
+				<p>The most popular topics concur with the most popular expressions found previously. More than 14% of the tweets were related to Donald Trump, 12% to the elections and 10% the BlackLivesMatter movement. Our model is able to find approximately 1.5% tweets that do not mention Trump directly but are related to him in a way or another</p>
+
+				<p>The distribution of topics among the trolls categories are uneven. In general, Right trolls are dominating every category.
+					<ul>
+                		<li>Right trolling focuses mostly about politicians (Donald Trump, Hillary Clinton, Barack Obama) and Election as these categories are at least 75% right oriented. <br> Conservative, religion (islam stigmatization) and bearing of arms are topic belonging to right trolls arguments.</li>
+                		<li>The four main topics for Left trolls are:  Black Lives Matter (17.7%),  Music (9.69%), Election (6.58%), and Trump (5.55%). However, the only subjects were Left Trolls outnumber the Right Trolls are: Music, Movies, Black Lives Matter, Me Too and Sport. </li>
+                	</ul>
+                </p>
+
+                <p>Overall, 57.46% of the tweets are categorized at least once while 21.60% are included in more than one topic.</p>
+
+                <p>In conclusion, while right trolls seem to be supporting Trump's ideas and focusing on events, left trolls have tend to favor more seemingly irrelevant content such as music or sport. This lead us to support Darren Linvill and Patrick Warren conclusion that Right Trolls aimed to mimic Trump supporters while Left Trolls goal was to divide the democrats.</p>
+
+                <p>Tweet topics have non-uniform distribution over time but rather follow a spiking behavior over time. To explore the potential cause of such behavior, Wikipedia Current Events website is scrapped. It records all the main events that happened during a day, classified by category. When a topic sipke is observed, the corresponding wikipedia page is scrapped to get the events. If the content is related to the topic, an event is detected.<br>However, the events detected might not be relevant. Three kinds of errors could explained it:
+                	<ul>
+                		<li>Trolls decide to launch a massive general tweet offensive (e.g. summer 2017). Hence, each category records a spike that might not corresponds to a particular topic event.</li>
+                		<li>A certain topic is suddenly extremely tweeted even though no events are correlated. The trolls decide to flood twitter with meaningless information.</li>
+                		<li>The algorithm is not precise enough. The error might be due to distinct writing style between quick informative tweets and precise descriptive Wikipedia content. The topic key words extracted from the tweets might not be accurate or informative enough.</li>
+                	</ul>
+                </p>
 
 				<object width="1000" height="650" align="middle" data="plots/Topic_Events.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
-				
+				<p>Most of the tweets are related to relevant real events.</p>
+
+				<p>On october 5th 2016, election, BlackLivesMatter,  music, sport and movie topics (essentially Left trolls) have a strong tweet peak (6000 tweets). On this day, two major events took place: the Paris climate agreement signature and Vladimir Putin suspending the 2013 nuclear agreement with the United States. The trolls might have decided to reduce the spreading of those news by flooding Twitter with irrelevant content about music. The goal may have been to divert attention from Russia’s departure on one hand and to avoid undecided people rallying to the ecological cause since Trump is anti-ecology.</p>
+
+				<p>Hacking and Hillary topics peaks happened exactly within the two months preceding the election.</p>
+
+				<p>On June 21th 2015, about 1000 messages about Obama were tweeted. However, no major event seem to have involved the former US president during these days.</p>
+
+				<p>On 22 may 2016 however, the spikes in Religion and Terrorism are caused by the Brussels bombing. Religion peaks because the attackers were radical muslims and the Right Trolls spread hate speech against muslims as a result.</p>
+
+				<p>During summer 2017, a major peak corresponds to the Charlottesville’s event. “Unite the right” white supremacists demonstrations and car attack against counter-protestant profoundly affect the american politic. The facts made trolls reacting with tweets about BlackLivesMatter, Terrorism etc. As discussed before, the Summer of 2017 was eventful, and Right Trolls were very active at this period. As a result, almost every Right Troll dominated topic see a surge in activity, Election category included. This increase in tweets for Election can be explained by the fact that this list also include references to US political parties who are probably used to anchor the debate.</p>
+
+				<p>Our findings in subject distribution, tweet activity and references lead us to believe that the trolls are following an overall divisive strategy. It seems they were trying to divide the public opinion on twitter by focusing on different subjects for different public to polarize the debat. Furthermore, we believe that Darren Linvill and Patrick Warren conclusion that Right Trolls aimed to mimic Trump supporters while Left Trolls goal was to divide the democrats is correct. Indeed, while we see right trolls heavily supporting Trump and taking politically engaged positions with links to the elections topic (Fear, Religion, and Terrorism), the left trolls focus more either on less relevant topics (Music, Movies, Sport) or on societal topics that aren’t directly linked to the elections (Black Lives Matter). As a conclusion,the left troll behaviour can be seen as a strategy to divert people’s attention from the elections to other events and subject, in total opposition to the right trolls who focus on elections and other topics deeply reasoning with conservatives.</p>
 			</div>
 
 			<!-- LINK WITH THE 2016 ELECTIONS -->
 			<div class="ElectionsLink">
 				<h2 class="Title">A Link with the 2016 Elections?</h2>
 
+				<p>The Trolls strategies to modulate the public opinion is now clearer, one question might be ticking your mind: is it a working strategy? <br> After all the scandal about the potential implication of the russian in the Trump victory, the most natural way to assess the effectiveness of the trolls strategy is to look at the 2016 US Presidential election polls.  More precisely: is there any correlation between the troll tweeting activity and the polls rate for both Clinton and Trump? <br> The FiveThirthyEight data aggregating polls from various pollsters throughout the presidential campaign is used.</p>
+
 				<object width="1000" height="500" align="middle" data="plots/Polls_timeline.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
+                <p>The average of all pollster per day shows a higher popularity for Hillary Clinton almost throughout the campaign, a week before the election day the mean difference was 2.2% in favor for Clinton. The prediction were very accurate, she actually won the popular vote by 2.1%. However, she lost the election losing the electoral vote by 13.7%. Was the result influenced by the trolls? To support this hypothesis, the correlation between the number of tweet and the polls is explored for each topics. </p>
+
 				<div id='dashboardCorrelation'></div>
 				<script src="javascript/correlationDashboard.js" type="text/javascript"></script>
+
+				<p>Apparently No! Indeed, the spearman coefficient is a measure of correlation between two variables: coefficient of 1 or -1 indicates a strong correlation whereas a coefficient of 0 indicates a lack of correlation.<br> As the coefficient are close to zero for most of the topics, it seems that there no dependency between the troll tweeting activity and the polls in favor of Clinton or Trump. Albeit small, the correlations are higher for Trump polls specifically for right troll tweets on subject concerning Clinton (Hacking and Hillary). Interestingly, right troll and tweeting about the Black Lives Matter movement have a positive impact on Trump’s polls. This  difference supports the theory of more politically engaged right tweets. Anyway, a coefficient of 0.4 is too low to confirm any correlation, this is confirmed by the scatterplots. <br> The higher impact observed for right tweets doesn’t mean that the trolls have an influence on the polls, it just shows that they evolves more or less together. <br> Hence : 
+					<ul>
+						<li>Troll tweets does not seems to have had an effect on the polls during the 2016 elections as no strong correlation can be found!</li>
+						<li>Right tweets about ‘Hillary’, ‘Hacking’, and ‘BlackLivesMatter’ seems to have the best correlation with the Polls in favor of Trump (yet a small correlation ~0.4).</li>
+					</ul>
+				</p>
 			</div>
 			
 			<!-- LINK WITH THE TRUMP PRESIDENCY -->
 			<div class="PresidencyLink">
 				<h2 class='Title'>A link with the Presidency Polls?</h2>
 
-				<object width="1000" height="800" align="middle" data="plots/Polls_presidensy_tweets_density.html" class="bokeh_plot"> 
+				<p>Maybe the election is a too big event for the trolls to have a significant and measurable impact on. It might also by that most of the voting citizen were already convicted of whom they would vote for and their opinion was already set. <br> What about after the elections ? Does the way the new president was perceived by the population could be influenced by the nasty trolls ? Let’s dive into it with a similar strategy as before. Before getting to the exciting correlation stuff, let’s take a look at the Trump popularity curves over time (Build with data of various pollsters stating the approval and disapproval rate of Trump).</p>
+
+				<object width="1000" height="800" align="middle" data="plots/Polls_presidensy_tweets_density.html" class="bokeh_plot">
                     Your browser doesn’t support the object tag. 
                 </object>
 
+                <p>It does not look really stable (between 45.3% and 36.7% of approval between january the 20th and october the 31th). The tweet activity displayed below shows a weakened activity of the left trolls while the Right trolls are still quite active! However, in December 2017, the tweeting activity is almost nonexistent for both Trolls type. Let’s get to the dependency between those (dis)approval rate and the   tweeting activity in different categories. </p>
+
                 <div id="dashboardCorrelationPresid"></div>
                 <script src="javascript/PresidencyCorrelationDashboard.js" type="text/javascript"></script>
+
+                <p>The spearman coefficient distribution over topics looks different than for the elections. The correlation between the Left trolls tweets and the Trump approval rates are around 0.4 for all categories. In a similar fashion, the disapproval rate correlation with  is around -0.4. But take a closer look at the number of tweet on the y-axis of the scatter plot. There are not much, around 20 daily-tweets only. Even though the spearman correlation coefficients seem bigger, it is intuitively unlikely that 20 tweets can modulate the public opinion on a national scale. <br> On the other hand, the right trolls are more active and around 10 times more daily-tweets are observed, but it appears that no dependency exist between the right tweeting activity and the (dis)approval rate Trump as president.</p>
 			</div>
 			
 			<!-- CONCLUSION OF THE DATASTORY -->

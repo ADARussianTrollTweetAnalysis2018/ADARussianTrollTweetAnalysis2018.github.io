@@ -144,7 +144,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
         //add plot title
         var titleTH = TopHgSVG.append("text")
                                 .attr("class", "plotTitleP")
-                                .attr("text-anchor", "left")
+                                .attr("text-anchor", "middle")
                                 .attr("x", TopHgDim.l+TopHgDim.w/2)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Approval Rate vs Tweet Number per Topic");
@@ -266,7 +266,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
         //add plot title
         var titleTH = BotHgSVG.append("text")
                                 .attr("class", "plotTitleP")
-                                .attr("text-anchor", "left")
+                                .attr("text-anchor", "middle")
                                 .attr("x", BotHgDim.l+BotHgDim.w/2)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Disapproval Rate vs Tweet Number per Topic");
