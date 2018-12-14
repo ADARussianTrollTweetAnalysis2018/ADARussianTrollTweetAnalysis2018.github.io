@@ -16,7 +16,7 @@
 		<!-- HEADER OF THE DATASTORY -->
 		<header>
 			<div class="HeadContent"> 
-				<h1 class="MainTitle">Russian Tr<img src="images/troll.png", alt="troll" class="TrollImage">ll Tweets and Their Influence on Public Opinion</h1>
+				<h1 class="MainTitle">Influence of Russian Troll Tweets on American Politic <br> <img src="images/twitter_logo.png", alt="twitter" class="TweeterImage"></h1>
 			</div>
 		</header>
 		
@@ -67,14 +67,14 @@
                 <h3>Top Words</h3>
                 <p>The Right Trolls seems to be more involved in politics as Trump, Hillary and Obama are the most popular words. The word ‘trump’ is used about 120’000 times that is about 13% of the total tweets. On the other hand, the Left trolls often used words related to music (music, live, play, video) and social movement related to black people (black and matter). Surprisingly, the word Hillary is more used by the right trolls than the left trolls</p>
 
-                <object width="1000" height="400" align="middle" data="plots/Top_Word.html" class="bokeh_plot"> 
+                <object width="1000" height="400" align="middle" data="plots/Top_words.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
                 <h3> Top #</h3>
                 <p>The hashtags can better characterize a tweet as it usually represents its key words. The expressions are clear oriented and specific to the category. The Left troll tweet are confirmed to be related to BlackLivesMatter movement and music whereas the Right trolls use mostly the Donald Trump’s slogan Make America Great Again and conservative and islamophobic topics (#2A, #IslamKills…).</p>
 
-                 <object width="1000" height="400" align="middle" data="plots/Top_hash.html" class="bokeh_plot"> 
+                 <object width="1000" height="400" align="middle" data="plots/Top_hashtags.html" class="bokeh_plot"> 
                     Your browser doesn’t support the object tag. 
                 </object>
 
@@ -105,124 +105,129 @@
 				<div class="tabTopic">
 				  <button class="tablinks" onclick="openTopic(event, 'Music')">Music</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Movies')">Movies</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Sport')">Sport</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Trump')">Trump</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Hillary')">Hillary</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Religion')">Religion</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Conservative')">Conservative</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Fear')">Fear</button>
-				  <button class="tablinks" onclick="openTopic(event, 'BlackLivesMatter')">BlackLivesMatter</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Voter')">Voter</button>
-				  <button class="tablinks" onclick="openTopic(event, 'MeToo')">MeToo</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Terrorism')">Terrorism</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Hacking')">Hacking</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Sanders')">Sanders</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Obama')">Obama</button>
-				  <button class="tablinks" onclick="openTopic(event, 'FakeNews')">FakeNews</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Gouvernment')">Gouvernment</button>
-				  <button class="tablinks" onclick="openTopic(event, 'HealthCare')">HealthCare</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Gun')">Gun</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Sport')">Sport</button>
-				  <button class="tablinks" onclick="openTopic(event, 'Scandal')">Scandal</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Election')">Election</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Voter')">Voter</button>
+				  <button class="tablinks" onclick="openTopic(event, 'HealthCare')">HealthCare</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Gouvernment')">Gouvernment</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Religion')">Religion</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Conservative')">Conservative</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Liberal')">Liberal</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Gun')">Gun</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Terrorism')">Terrorism</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Fear')">Fear</button>
+				  <button class="tablinks" onclick="openTopic(event, 'BlackLivesMatter')">BlackLivesMatter</button>
+				  <button class="tablinks" onclick="openTopic(event, 'MeToo')">MeToo</button>
+				  <button class="tablinks" onclick="openTopic(event, 'FakeNews')">FakeNews</button>
+				  <button class="tablinks" onclick="openTopic(event, 'News')">News</button>
+				  <button class="tablinks" onclick="openTopic(event, 'Scandal')">Scandal</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Charlottesville')">Charlottesville</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Economy')">Economy</button>
-				  <button class="tablinks" onclick="openTopic(event, 'News')">News</button>
 				</div>
 
 				<div id="Music" class="tabcontent">
-				  <p>Topic related to musical content.</p>
+				  <p><span class="tabContentTopic">Topic related to</span> musical content.</p>
 				</div>
 
 				<div id="Movies" class="tabcontent">
-				  <p>Topic related to movies/TV.</p> 
-				</div>
-
-				<div id="Trump" class="tabcontent">
-				  <p>Topic related to Trump.</p>
-				</div>
-
-				<div id="Hillary" class="tabcontent">
-				  <p>Topic related to Hillary</p>
-				</div>
-
-				<div id="Religion" class="tabcontent">
-				  <p>Topic related to religion</p>
-				</div>
-
-				<div id="Conservative" class="tabcontent">
-				  <p>Topic related to conservatist republican anti migran in favor of weapon bearing</p>
-				</div>
-
-				<div id="Fear" class="tabcontent">
-				  <p>Topic related to geopolitical tension with other power such as North Korea or Russia</p>
-				</div>
-
-				<div id="BlackLivesMatter" class="tabcontent">
-				  <p>Topic related to the BlackLivesMatter protest movement fighting against discrimination toward black persons (Mainly because of police brutalities).</p>
-				</div>
-
-				<div id="Voter" class="tabcontent">
-				  <p>Topic related to voter fraud.</p>
-				</div>
-
-				<div id="MeToo" class="tabcontent">
-				  <p>Topic related to the movement against sexual harassment.</p>
-				</div>
-
-				<div id="Terrorism" class="tabcontent">
-				  <p>Topic related to terrorism : attack, shootings, bombing, and others.</p>
-				</div>
-
-				<div id="Hacking" class="tabcontent">
-				  <p>Topic related to hacking leading to email leaks, data breach and other.</p>
-				</div>
-
-				<div id="Sanders" class="tabcontent">
-				  <p>Topic related to the senator Bernie Sanders who was the oponent of Hillary Clinton for the democrate primary nomination.</p>
-				</div>
-
-				<div id="Obama" class="tabcontent">
-				  <p>Topic related to the former US president Barack Obama.</p>
-				</div>
-
-				<div id="FakeNews" class="tabcontent">
-				  <p>Topic related to fake news, and the associated media.</p>
-				</div>
-
-				<div id="Gouvernment" class="tabcontent">
-				  <p>Topic related to the US gouvernement in general.</p>
-				</div>
-
-				<div id="HealthCare" class="tabcontent">
-				  <p>Topic Related to the heath care.</p>
-				</div>
-
-				<div id="Gun" class="tabcontent">
-				  <p>Topic related to the guns.</p>
+				  <p><span class="tabContentTopic">Topic related to</span> movies/TV.</p> 
 				</div>
 
 				<div id="Sport" class="tabcontent">
-				  <p>Topic related to sport content.</p>
+				  <p><span class="tabContentTopic">Topic related to</span> sport content.</p>
 				</div>
 
-				<div id="Scandal" class="tabcontent">
-				  <p>Topic related to scandal over various subjects such as money or political.</p>
+				<div id="Trump" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the actual president : Donald Trump.</p>
+				</div>
+
+				<div id="Hillary" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> democrate candidate of the 2016 elections Hillary Clinton.</p>
+				</div>
+
+				<div id="Hacking" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> hacking leading to email leaks, data breach and other.</p>
+				</div>
+
+				<div id="Sanders" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the senator Bernie Sanders who was the oponent of Hillary Clinton for the democrate primary nomination.</p>
+				</div>
+
+				<div id="Obama" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the former US president Barack Obama.</p>
 				</div>
 
 				<div id="Election" class="tabcontent">
-				  <p>Topic related to elections campaignes, debats, votations and other.</p>
+				  <p><span class="tabContentTopic">Topic related to</span> elections campaignes, debats, votations and other.</p>
 				</div>
 
-				<div id="Charlottesville" class="tabcontent">
-				  <p>Topic related to the neo-nazi rally of Charlottesville of the 12 august 2017.</p>
+				<div id="Voter" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> voter fraud.</p>
 				</div>
 
-				<div id="Economy" class="tabcontent">
-				  <p>Topic related to economy in general.</p>
+				<div id="HealthCare" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the heath care.</p>
+				</div>
+
+				<div id="Gouvernment" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the US gouvernement in general.</p>
+				</div>
+
+				<div id="Religion" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> religions (especially islam).</p>
+				</div>
+
+				<div id="Conservative" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> conservatist republican anti migran in favor of weapon bearing</p>
+				</div>
+
+				<div id="Liberal" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the liberal ideology.</p>
+				</div>
+
+				<div id="Gun" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the guns bearing right.</p>
+				</div>
+
+				<div id="Terrorism" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> terrorism : attack, shootings, bombing, and others.</p>
+				</div>
+
+				<div id="Fear" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> geopolitical tension with other power such as North Korea or Russia</p>
+				</div>
+
+				<div id="BlackLivesMatter" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the BlackLivesMatter protest movement fighting against discrimination toward black persons (Mainly because of police brutalities).</p>
+				</div>
+
+				<div id="MeToo" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the movement against sexual harassment.</p>
+				</div>
+
+				<div id="FakeNews" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> fake news, and the associated media.</p>
 				</div>
 
 				<div id="News" class="tabcontent">
-				  <p>Topic related to news.</p>
+				  <p><span class="tabContentTopic">Topic related to</span> news.</p>
+				</div>
+
+				<div id="Scandal" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> scandal over various subjects such as money or political.</p>
+				</div>
+
+				<div id="Charlottesville" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> the neo-nazi rally of Charlottesville of the 12 august 2017.</p>
+				</div>
+
+				<div id="Economy" class="tabcontent">
+				  <p><span class="tabContentTopic">Topic related to</span> economy in general.</p>
 				</div>
 
 				<script>

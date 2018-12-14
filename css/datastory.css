@@ -28,12 +28,13 @@ header{
 	display: inline-block;
 	width: 1000px;
 }
-.TrollImage{
+.TweeterImage{
 	max-height: 45px;
 }
 .MainTitle{
 	font-family: "Avenir";
 	font-weight: bold;
+	margin-bottom: 0px;
 }
 .BottomHeader{
 	padding-top: 10px;
@@ -165,6 +166,9 @@ img.colormapImg{
   padding: 2px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+.tabContentTopic{
+	font-weight: bold;
 }
 footer{
 	background-color: cornflowerblue;
