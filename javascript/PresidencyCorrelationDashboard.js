@@ -19,7 +19,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
 
     function topHist(histData){
         // hist dimensions
-        var TopHg={},    TopHgDim = {t: 50, r: 10, b: 90, l: 10};
+        var TopHg={},    TopHgDim = {t: 50, r: 10, b: 90, l: 30};
         TopHgDim.w = 500 - TopHgDim.l - TopHgDim.r, 
         TopHgDim.h = 300 - TopHgDim.t - TopHgDim.b;
 
@@ -32,7 +32,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
 
         // create scale in x
         var x = d3.scale.ordinal()
-        				.rangeRoundBands([0, TopHgDim.w], 0.1)
+        				.rangeRoundBands([TopHgDim.l, TopHgDim.w], 0.1)
                   		.domain(histData.map(function(d) { return d[0]; }));
 
         TopHgSVG.append("g")
@@ -74,16 +74,6 @@ function dashboardCorrPresidency(id, topicData, corrData){
             .on("mouseover",mouseover_L)// mouseover is defined below.
             .on("mouseout",mouseout_L);// mouseout is defined below.
         
-        //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(".2f")(d[1])})
-            .attr("x", function(d) { return x(d[0])-x.rangeBand()/4+x.rangeBand()/8; })
-            .attr("y", function(d) { 
-            				if(d[1] >= 0){return y(d[1])-5;}
-            				else if(d[1] < 0){return y(d[1])+10;} })
-            .attr("text-anchor", "middle")
-            .attr("font-size","8px")
-            .attr("font-family","sans-serif");
-        
         // create the rectangles Right
         bars.append("rect")
             .attr("x", function(d) { return x(d[0])+x.rangeBand()/4; })
@@ -100,20 +90,23 @@ function dashboardCorrPresidency(id, topicData, corrData){
             .on("mouseover",mouseover_R)// mouseover is defined below.
             .on("mouseout",mouseout_R);// mouseout is defined below.
 
-        //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(".2f")(d[2])})
-            .attr("x", function(d) { return x(d[0])+x.rangeBand()/4+x.rangeBand()/8; })
-            .attr("y", function(d) { 
-            				if(d[2] >= 0){return y(d[2])-5;}
-            				else if(d[2] < 0){return y(d[2])+10;}
-            			 })
+        // Yaxis
+        THYAxis = d3.svg.axis().scale(y).orient("left")
+        TopHgSVG.append("g").attr("class","histAxisP")
+                            .attr("transform", "translate(" + TopHgDim.l + ",0)")
+                            .call(THYAxis);
+
+        var ylabel = TopHgSVG.append("text")
+            .attr("class", "yP labelP")
             .attr("text-anchor", "middle")
-            .attr("font-size","8px")
-            .attr("font-family","sans-serif");
+            .attr("x", -(TopHgDim.h+TopHgDim.t)/2+25)
+            .attr("y", -5)
+            .attr("transform", "rotate(-90)")
+            .text("Spearman Coeff.");
 
         //add legend
         var legDim = 10;
-        var pad = 120;
+        var pad = 140;
         var space = 3;
         var legTHR = TopHgSVG.append("rect")
                             .attr("x",TopHgDim.l+TopHgDim.w-2*pad)
@@ -145,7 +138,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
         var titleTH = TopHgSVG.append("text")
                                 .attr("class", "plotTitleP")
                                 .attr("text-anchor", "middle")
-                                .attr("x", TopHgDim.l+TopHgDim.w/2)
+                                .attr("x", TopHgDim.l+TopHgDim.w/2-40)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Approval Rate vs Tweet Number per Topic");
 
@@ -171,7 +164,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
     }
 
     function botHist(histData){
-        var BotHg={},    BotHgDim = {t: 60, r: 0, b: 90, l: 10};
+        var BotHg={},    BotHgDim = {t: 60, r: 10, b: 90, l: 30};
         BotHgDim.w = 500 - BotHgDim.l - BotHgDim.r, 
         BotHgDim.h = 300 - BotHgDim.t - BotHgDim.b;
 
@@ -183,7 +176,7 @@ function dashboardCorrPresidency(id, topicData, corrData){
                          .attr("transform", "translate(" + BotHgDim.l + "," + BotHgDim.t + ")");
 
         // create scale in x
-        var x = d3.scale.ordinal().rangeRoundBands([0, BotHgDim.w], 0.1)
+        var x = d3.scale.ordinal().rangeRoundBands([BotHgDim.l, BotHgDim.w], 0.1)
                   .domain(histData.map(function(d) { return d[0]; }));
 
         BotHgSVG.append("g")
@@ -225,17 +218,6 @@ function dashboardCorrPresidency(id, topicData, corrData){
             .on("mouseover",mouseover_L)// mouseover is defined below.
             .on("mouseout",mouseout_L);// mouseout is defined below.
         
-        //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(".2f")(d[1])})
-            .attr("x", function(d) { return x(d[0])-x.rangeBand()/4+x.rangeBand()/8; })
-            .attr("y", function(d) { 
-            				if(d[1] >= 0){return y(d[1])-5;}
-            				else if(d[1] < 0){return y(d[1])+10;}
-            			 })
-            .attr("text-anchor", "middle")
-            .attr("font-size","8px")
-            .attr("font-family","sans-serif");
-        
         // create the rectangles Right
         bars.append("rect")
             .attr("x", function(d) { return x(d[0])+x.rangeBand()/4; })
@@ -252,22 +234,25 @@ function dashboardCorrPresidency(id, topicData, corrData){
             .on("mouseover",mouseover_R)// mouseover is defined below.
             .on("mouseout",mouseout_R);// mouseout is defined below.
 
-        //Create the frequency labels above the rectangles.
-        bars.append("text").text(function(d){ return d3.format(".2f")(d[2])})
-            .attr("x", function(d) { return x(d[0])+x.rangeBand()/4+x.rangeBand()/8; })
-            .attr("y", function(d) { 
-            				if(d[2] >= 0){return y(d[2])-5;}
-            				else if(d[2] < 0){return y(d[2])+10;}
-            			 })
+        // Yaxis
+        BHYAxis = d3.svg.axis().scale(y).orient("left")
+        BotHgSVG.append("g").attr("class","histAxisP")
+                            .attr("transform", "translate(" + BotHgDim.l + ",0)")
+                            .call(BHYAxis);
+
+        var ylabel = BotHgSVG.append("text")
+            .attr("class", "yP labelP")
             .attr("text-anchor", "middle")
-            .attr("font-size","8px")
-            .attr("font-family","sans-serif");
+            .attr("x", -(BotHgDim.h+BotHgDim.t)/2+25)
+            .attr("y", -5)
+            .attr("transform", "rotate(-90)")
+            .text("Spearman Coeff.");
 
         //add plot title
         var titleTH = BotHgSVG.append("text")
                                 .attr("class", "plotTitleP")
                                 .attr("text-anchor", "middle")
-                                .attr("x", BotHgDim.l+BotHgDim.w/2)
+                                .attr("x", BotHgDim.l+BotHgDim.w/2-40)
                                 .attr("y", -20)
                                 .text("Spearman Coefficent of Trump Disapproval Rate vs Tweet Number per Topic");
 

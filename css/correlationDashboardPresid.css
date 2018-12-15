@@ -37,6 +37,16 @@
 .THxP.axisP path {
     display: none;
 }
+.histAxisP path,
+.histAxisP line{
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.histAxisP text{
+    font-family: sans-serif;
+    font-size: 11px;
+}
 .pointP {
     fill:dimgray;
     opacity: 0.5;

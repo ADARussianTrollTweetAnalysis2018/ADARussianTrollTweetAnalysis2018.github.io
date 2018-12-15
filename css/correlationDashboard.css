@@ -37,11 +37,20 @@
 .THx.axis path {
     display: none;
 }
+.histAxis path,
+.histAxis line{
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.histAxis text{
+    font-family: sans-serif;
+    font-size: 11px;
+}
 .point {
     fill:dimgray;
     opacity: 0.5;
 }
-
 .scatAxis path,
 .scatAxis line{
     fill: none;

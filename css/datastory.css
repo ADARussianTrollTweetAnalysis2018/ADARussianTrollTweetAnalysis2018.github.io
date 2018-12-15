@@ -131,14 +131,42 @@ img.colormapImg{
     margin-right: auto;
     max-width:400px;
 }
-/* Style the tab */
+
+/* Plot Tab */
+.tabPlot {
+  /*overflow: hidden;
+  border: 1px solid #ccc;*/
+  background-color: #f1f1f1;
+}
+.tabPlot button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 10px;
+  transition: 0.3s;
+  font-size: 12px;
+}
+.tabPlot button:hover {
+  background-color: #ddd;
+}
+.tabPlot button.active {
+  background-color: #ccc;
+}
+.tabPlotcontent {
+  display: none;
+  padding: 2px 12px;
+  /*border: 1px solid #ccc;*/
+  border-top: none;
+  }
+
+/* Topic Tab */
 .tabTopic {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
-
-/* Style the buttons inside the tab */
 .tabTopic button {
 	background-color: inherit;
 	float: left;
@@ -149,18 +177,12 @@ img.colormapImg{
 	transition: 0.3s;
 	font-size: 12px;
 }
-
-/* Change background color of buttons on hover */
 .tabTopic button:hover {
   background-color: #ddd;
 }
-
-/* Create an active/current tablink class */
 .tabTopic button.active {
   background-color: #ccc;
 }
-
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 2px 12px;
@@ -170,6 +192,9 @@ img.colormapImg{
 .tabContentTopic{
 	font-weight: bold;
 }
+
+
+/* FOOTER */
 footer{
 	background-color: cornflowerblue;
 	box-shadow: inset 0px 50px 110px -50px lightsteelblue;

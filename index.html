@@ -24,15 +24,13 @@
 		<div id="Core">
 			<!-- INTRODUCTION OF THE DATASTORY -->
 			<div class="Intro">
-				<!--<h2 class="Title">Intro & Data</h2>-->
-
 				<p>The outcome of the 2016 US election were a surprise, very few experts predicted a Trump win. How come so few people previewed its rise? One argument regularly proposed is a possible outside influence...</p>
 
 				<p>Since top intelligence officials of the Obama administration announced on October 7 2016 their belief that the Russian government was behind the hacking of the Democratic National Committee earlier in the year, Russia has been accused of meddling with the 2016 US elections. It is believed that their means of action included not only hacking but also transfer of information as well as public opinion manipulation. For example, to sway the public opinion, the Kremlin used an army of online trolls through its Internet Research Agency (IRA) based in St. Petersburg, one of the trolls’ media was Trump’s favorite: Twitter. </p>
 
 				<p>The main dataset we are using was released by FiveThirtyEight and contains close to 3 million tweets posted by the IRA . Although 72% of tweets were in English, they were posted in 55 different languages and categorized by Darren Linvill and Patrick Warren of Clemson University into 8 categories.</p>
 
-				<p>Since we are looking into the effect of the tweet on the US politics, we focus on politically labeled english tweets: The ‘Left Troll’ and ‘Right Troll’ categories. These category are the result of Darren Linvill and Patrick Warren and were reviewed by external experts, hence we take these category as “true”. In the end, we have approximately 1M tweets, 63% of which are right-leaning.<br>The work of these trolls did not start at the election. Indeed, they started as soon as 2014 and continued well into 2018. Hence, the political situation in the US was interpreted by analyzing 2016 Presidential polls from November 2015 to the election a year later, and by analyzing Trump’s approval rate after the elections. All datasets were obtained from FiveThirtyEight.</p>
+				<p>Since we are looking into the effect of the tweet on the US politics, we focus on politically labeled english tweets: The ‘Left Troll’ and ‘Right Troll’ categories. These category are the result of Darren Linvill and Patrick Warren and were reviewed by external experts, hence we take these category as “true”. In the end, we have approximately 1M tweets, 63% of which are right-leaning.<br>The work of these trolls did not start at the election. Indeed, they started as soon as 2014 and continued well into 2018. Hence, the political situation in the US was interpreted by analyzing 2016 Presidential polls from November 2015 to the election a year later, and by analyzing Trump’s approval rate after the elections. All datasets were obtained from <a href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight" target="_blank">FiveThirtyEight</a>.</p>
 
 				<p>To understand how the trolling could have had any effect, we need to first understand who are troll and how do they work. Then, we need dive into the tweets’ content to finally analyse the existence of a link with the 2016 elections or Trump’s approval rates.</p>
 			</div>
@@ -52,9 +50,40 @@
                     Your browser doesn’t support the object tag. 
                 </object>-->
 
-                <object width="1000" height="1000" align="middle" data="plots/Follower_Plot.html" class="bokeh_plot"> 
-                    Your browser doesn’t support the object tag. 
-                </object>
+                <div class="tabPlot">
+					<button id="defaultPlot" class="tablinks" autofocus onclick="openPlot(event, 'NbrTweetPlot')">Tweet Density</button>
+					<button class="tablinks" onclick="openPlot(event, 'NbrPeopleReached')">Number Of People Reached</button>
+				</div>
+
+				<div id='NbrTweetPlot' class="tabPlotcontent">
+					<object width="1000" height="500" align="middle" data="plots/top_daily_tweets.html" class="bokeh_plot"> 
+                    	Your browser doesn’t support the object tag. 
+                	</object>
+				</div>
+
+				<div id='NbrPeopleReached' class="tabPlotcontent">
+					<object width="1000" height="500" align="middle" data="plots/People_Reached.html" class="bokeh_plot"> 
+                    	Your browser doesn’t support the object tag. 
+                	</object>
+				</div>
+
+				<script>
+					document.getElementById('defaultPlot').click();
+
+					function openPlot(evt, PlotName) {
+					  var i, tabcontent, tablinks;
+					  tabcontent = document.getElementsByClassName("tabPlotcontent");
+					  for (i = 0; i < tabcontent.length; i++) {
+					    tabcontent[i].style.display = "none";
+					  }
+					  tablinks = document.getElementsByClassName("tablinks");
+					  for (i = 0; i < tablinks.length; i++) {
+					    tablinks[i].className = tablinks[i].className.replace(" active", "");
+					  }
+					  document.getElementById(PlotName).style.display = "block";
+					  evt.currentTarget.className += " active";
+					}
+				</script>
 
                 <p>Internationally, Russia and the US were expelling their respectives government officials, clashing over the Syrian and Donbass conflicts and imposing new sanctions on each other. In Asia, a bellicose build-up between Trump and Kim Jung-Un lead to rockets flying over Japan in direction of Guam while tensions grew due to territorial dispute in the South China Sea. New sanctions were announced against Iran and diplomatic relations were degrading with old allies (Mexico, Australia) and Cuba. Finally, the US withdrew from the Paris climate agreement.</p>
 	
@@ -108,7 +137,7 @@
 				<p>A set of 25  topics is created inspired by the popular hashtags and the events that affected the american politic. The lists of keywords are enriched thanks to a Word2vec machine learning model for each topic. Word2Vec enables to learn the linguistic context of each word over all tweets and represent them as “concepts”. Hence, similar words share the same representation and can thus be gathered in topics. Starting from few words, the lists are extended ten times using our model trained on the tweets content.</p>
 
 				<div class="tabTopic">
-				  <button class="tablinks" onclick="openTopic(event, 'Music')">Music</button>
+				  <button id="defaultTopic" class="tablinks" onclick="openTopic(event, 'Music')">Music</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Movies')">Movies</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Sport')">Sport</button>
 				  <button class="tablinks" onclick="openTopic(event, 'Trump')">Trump</button>
@@ -236,6 +265,8 @@
 				</div>
 
 				<script>
+					document.getElementById('defaultTopic').click();
+
 					function openTopic(evt, TopicName) {
 					  var i, tabcontent, tablinks;
 					  tabcontent = document.getElementsByClassName("tabcontent");
@@ -269,7 +300,7 @@
 
                 <p>In conclusion, while right trolls seem to be supporting Trump's ideas and focusing on events, left trolls have tend to favor more seemingly irrelevant content such as music or sport. This lead us to support Darren Linvill and Patrick Warren conclusion that Right Trolls aimed to mimic Trump supporters while Left Trolls goal was to divide the democrats.</p>
 
-                <p>Tweet topics have non-uniform distribution over time but rather follow a spiking behavior over time. To explore the potential cause of such behavior, Wikipedia Current Events website is scrapped. It records all the main events that happened during a day, classified by category. When a topic sipke is observed, the corresponding wikipedia page is scrapped to get the events. If the content is related to the topic, an event is detected.<br>However, the events detected might not be relevant. Three kinds of errors could explained it:
+                <p>Tweet topics have non-uniform distribution over time but rather follow a spiking behavior over time. To explore the potential cause of such behavior, <a href="https://en.wikipedia.org/wiki/Portal:Current_events" target="_blank">Wikipedia Current Events</a> website is scrapped. It records all the main events that happened during a day, classified by category. When a topic sipke is observed, the corresponding wikipedia page is scrapped to get the events. If the content is related to the topic, an event is detected.<br>However, the events detected might not be relevant. Three kinds of errors could explained it:
                 	<ul>
                 		<li>Trolls decide to launch a massive general tweet offensive (e.g. summer 2017). Hence, each category records a spike that might not corresponds to a particular topic event.</li>
                 		<li>A certain topic is suddenly extremely tweeted even though no events are correlated. The trolls decide to flood twitter with meaningless information.</li>
