@@ -54,13 +54,13 @@
 				</div>
 
 				<div id='NbrTweetPlot' class="tabPlotcontent">
-					<object width="1000" height="500" align="middle" data="plots/top_daily_tweets.html" class="bokeh_plot"> 
+					<object width="1000" height="425" align="middle" data="plots/TopHashthag_perday.html" class="bokeh_plot"> 
                     	Your browser doesn’t support the object tag. 
                 	</object>
 				</div>
 
 				<div id='NbrPeopleReached' class="tabPlotcontent">
-					<object width="1000" height="500" align="middle" data="plots/People_Reached.html" class="bokeh_plot"> 
+					<object width="1000" height="425" align="middle" data="plots/People_Reached.html" class="bokeh_plot"> 
                     	Your browser doesn’t support the object tag. 
                 	</object>
 				</div>
@@ -280,7 +280,7 @@
 					}
 				</script>
 
-				<p>The proportions of tweets in each topic provides an overview of the debates that were particularly targeted by the different trolls to better characterize of the left and right trolls.<br> 60.93% of tweets were successfully categorized. Right troll tweets are categorized in 66.99% of cases against 50.60% for feft troll.  Moreover, 25.85% of tweets appear in more than one category.</p>
+				<p>The proportions of tweets in each topic provides an overview of the debates that were particularly targeted by the different trolls to better characterize of the left and right trolls.<br> 60.93% of tweets were successfully categorized. Right troll tweets are categorized in 66.99% of cases against 50.60% for left troll.  Moreover, 25.85% of tweets appear in more than one category.</p>
 				
 				<div id='dashboard'></div>
 				<script src="javascript/dashboard.js" type="text/javascript"></script>
@@ -338,10 +338,10 @@
 				<div id='dashboardCorrelation'></div>
 				<script src="javascript/correlationDashboard.js" type="text/javascript"></script>
 
-				<p>Apparently no. The spearman coefficient measures the correlation between two variables: coefficient of 1 or -1 indicates a strong correlation whereas a coefficient of 0 indicates a lack of correlation.<br> As the coefficient are low for most topics, no dependency is found between the troll tweeting activity and the campaign polls. Albeit small, the correlations are higher for Trump polls, specifically for right troll tweets on subject concerning Clinton (<i>Hacking</i> and <i>Hillary</i>). Interestingly, right troll tweeting about the <i>Black Lives Matter</i> movement have a positive impact on Trump’s polls. This  difference supports the theory of more politically engaged right tweets. Anyway, 0.4 is too low to confirm any correlation, this is confirmed by the points distribution. <br> The higher impact observed for right tweets doesn’t mean that the trolls have an influence on the polls, it just shows that they evolves more or less together.<br> Hence : 
+				<p>Apparently no. The spearman coefficient measures the correlation between two variables: coefficient of 1 or -1 indicates a strong correlation whereas a coefficient of 0 indicates a lack of correlation.<br> As the coefficient are low for most topics, no dependency is found between the troll tweeting activity and the campaign polls. Albeit small, the correlations are higher for Trump polls, specifically for right troll tweets on subject concerning Clinton (<i>Hacking</i> and <i>Hillary</i>). Interestingly, right troll tweeting about the <i>Black Lives Matter</i> movement have a positive impact on Trump’s polls. This  difference supports the theory of more politically engaged right tweets. Anyway, a 0.4 correlation coefficient is too low to confirm any correlation, this is confirmed by the points distribution. <br> The higher impact observed for right tweets does not mean that the trolls have an influence on the polls, it just shows that they evolves roughly together.<br> Hence : 
 					<ul>
-						<li>Troll tweets does not seems to have had an effect on the polls during the 2016 elections as no strong correlation can be found!</li>
-						<li>Right tweets about <i>‘Hillary’</i>, <i>‘Hacking’</i>, and <i>‘Black Lives Matter’</i> seems to have the best correlation, yet small, with the Polls in Trump’s favor.</li>
+						<li>Troll tweets does not seems to have had an effect on the polls during the 2016 elections as no strong correlation can be found !</li>
+						<li>Right tweets about <i>‘Hillary’</i>, <i>‘Hacking’</i>, and <i>‘Black Lives Matter’</i> seems to have the best correlation, yet small, with the polls in Trump’s favor.</li>
 					</ul>
 				</p>
 			</div>
@@ -350,7 +350,7 @@
 			<div class="PresidencyLink">
 				<h2 class='Title'>A link with Trump Presidency Approval Rate?</h2>
 
-				<p>Maybe the election is an event too big for the trolls to have a significant and measurable impact. It might also be that most of the voter were already convicted of their votes for and their opinion was already set.</p>
+				<p>Maybe the election were an event too big for the trolls to have a significant and measurable impact. It might also be that most of the voter were already convicted of their votes for and their opinion was already made up.</p>
 
 				<p>Do the troll affect Trump’s approval rates?<br>(Build with data of various pollsters stating the approval and disapproval rate of Trump).</p>
 
@@ -358,19 +358,23 @@
                     Your browser doesn’t support the object tag. 
                 </object>
 
-                <p>It does not look really stable (between 45.3% and 36.7% of approval between january the 20th and october the 31th). The tweet activity displayed below shows a weakened activity of the left trolls while the Right trolls are still quite active! The plot shows how the eventful 2017 summer affects the President’s approval rates. The dramatic increase in right trolling while left trolling stagnates suggests that the IRA is trying to boost Trump’s popularity. Since the left trolls do not tweet much in this period, the tweeting activity is probably not caused by events. Hence, the increased activity can be interpreted as an attempt to boost Donald Trump’s popularity online.</p>
+                <p>It does not look really stable (between 45.3% and 36.7% of approval between january the 20th and october the 31th). The tweet activity displayed below shows a weakened activity of the left trolls while the Right trolls are still quite active ! The plot shows how the eventful 2017 summer affects the President’s approval rates. The dramatic increase in right trolling while left trolling stagnates suggests that the IRA is trying to boost Trump’s popularity. Since the left trolls do not tweet much in this period, the tweeting activity is probably not caused by events. Hence, the increased activity can be interpreted as an attempt to boost Donald Trump’s popularity online.</p>
 
                 <div id="dashboardCorrelationPresid"></div>
                 <script src="javascript/PresidencyCorrelationDashboard.js" type="text/javascript"></script>
 
-                <p>The spearman coefficient distribution over topics looks different than for the elections. The correlation between the Left trolls tweets and the Trump approval rates are around 0.4 for all categories. In a similar fashion, the disapproval rate correlation with  is around -0.4. But take a closer look at the number of tweet on the y-axis of the scatter plot. There are only around 20 daily-tweets. Even though the spearman correlation coefficients seem bigger, it is intuitively unlikely that 20 tweets can modulate the public opinion on a national scale. <br>On the other hand, the right trolls are more active and around 10 times more daily-tweets are observed, but it appears that no dependency exist between the right tweeting activity and the (dis)approval rate Trump as president.</p>
+                <p>The spearman coefficient distribution over topics looks different than for the elections. The correlation between the Left trolls tweets and the Trump approval rates are around 0.4 for all categories. In a similar fashion, the disapproval rate correlation with left trolls is around -0.4. But take a closer look at the number of tweet on the y-axis of the scatter plot. There are only around 20 daily-tweets. Even though the spearman correlation coefficients seem bigger, it is intuitively unlikely that 20 tweets can modulate the public opinion on a national scale. <br>On the other hand, the right trolls are more active and around 10 times more daily-tweets are observed, but it appears that no dependency exist between the right tweeting activity and the (dis)approval rate Trump as president.</p>
 			</div>
 			
 			<!-- CONCLUSION OF THE DATASTORY -->
 			<div class="Conclusion">
 				<h2 class="Title">Conclusion</h2>
 
+				<p>In brief, focusing only on the english Right and Left trolls accounts, it appears that the Right trolls are more involved politically. Their favorite hashtag is <i>#MAGA</i> and they cite preferentially <i>@realdonaldtrump</i>. They appears to be fervent supporter of Trump: their tweeting activty increased drastically when Trump approval rate went down in summer 2017, likely to push him up. <br> In the other hand the Left trolls seem to have a more scattered  interest as they are tweeting a lot about music content, sport. The other major topic harnessed by the left is BlackLivesMatter (17.5% of the left tweets) which is not directly related to the elections. In consequence, the left trolls are likely to be Fake leftist trying to divide democrats. Indeed, when Trump was in a difficult situation during the 2017 summer, the Left trolls tweeting activity stayed really low. If they where real leftist, they would likely have trashed Trump.</p>
 
+				<p>The correlation analysis demonstrates that the troll tweet activity in various topic does not correlate neither with the 2016 election polls, nor with the Trump approval polls. In consequence, their effect on the American politic seems limited and insignificant. Moreover, those tweets did not reached enough people to be able to cause any national polls modulation: at the highest, around 500’000 person have been directly reached by the troll tweets. 
+ 
+				</p>
 			</div>
 			
 
@@ -387,7 +391,7 @@
 					</div>-->
 				</div>
 				<div class="BottomCenterFooter">
-						<p class="Date">December 2018</p>
+						<p class="Date">ADA - December 2018</p>
 				</div>
 				<div class='BottomRightFooter'>
 					<div class='MailSec'>
