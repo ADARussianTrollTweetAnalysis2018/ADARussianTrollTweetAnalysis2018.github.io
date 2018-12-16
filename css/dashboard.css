@@ -50,3 +50,7 @@ rect:hover {
     align:right;
     width:50px;
 }
+.dashboardTitle{
+    font-family: sans-serif;
+    font-size: 14px;
+}

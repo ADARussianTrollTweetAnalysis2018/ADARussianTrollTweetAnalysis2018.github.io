@@ -65,6 +65,14 @@ function dashboard(id, fData){
             .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
             .attr("y", function(d) { return y(d[1])-5; })
             .attr("text-anchor", "middle")
+
+        //add plot title
+        var titleH = hGsvg.append("text")
+                                .attr("class", "dashboardTitle")
+                                .attr("text-anchor", "left")
+                                .attr("x", 0)
+                                .attr("y", -25)
+                                .text("Topic distribution by Trolls categories");
         
         function mouseover(d){  // utility function to be called on mouseover.
             // filter for selected state.
